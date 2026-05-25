@@ -5,608 +5,491 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta
     name="description"
-    content="Portfolio of Aung Khant Paing, a Software Engineering student at TDTU focused on full-stack systems, AI-assisted products, database architecture, and deployment workflows."
+    content="Portfolio of Aung Khant Paing, a Software Engineering student at Ton Duc Thang University focused on full-stack systems, AI-assisted products, database architecture, and deployment workflows."
   >
   <title>Aung Khant Paing | Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  >
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
 <body data-theme="light">
-  <div class="page-background" aria-hidden="true">
-    <div class="page-background__glow page-background__glow--one"></div>
-    <div class="page-background__glow page-background__glow--two"></div>
-    <div class="page-background__grid"></div>
-  </div>
-
   <div class="site-shell">
-    <aside class="profile-column">
-      <div class="profile-stack">
-        <section class="panel profile-card reveal">
-          <div class="profile-topline">
-            <a class="brand-mark" href="#top" aria-label="Go to top">AKP</a>
-            <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">
-              Dark Mode
-            </button>
-          </div>
+    <header class="topbar screen-line-top screen-line-bottom">
+      <a class="topbar__brand" href="#top">AKP / Portfolio</a>
 
-          <div class="profile-hero">
-            <div class="avatar-badge" aria-hidden="true">
-              <span>AKP</span>
-            </div>
-
-            <div class="profile-copy">
-              <p class="eyebrow">Software Engineering Student at TDTU</p>
-              <h1>Aung Khant Paing</h1>
-              <p class="profile-lede">
-                Building practical systems where interface clarity, backend logic, and delivery all matter.
-              </p>
-            </div>
-          </div>
-
-          <div class="profile-actions">
-            <a class="button button--primary" href="assets/AungKhantPaing-CV.pdf" target="_blank" rel="noreferrer">
-              Download CV
-            </a>
-            <a class="button button--secondary" href="https://github.com/MileFisher" target="_blank" rel="noreferrer">
-              GitHub
-            </a>
-          </div>
-
-          <dl class="overview-list">
-            <div>
-              <dt>Focus</dt>
-              <dd>Full-stack web, AI workflows, databases, and DevOps delivery</dd>
-            </div>
-            <div>
-              <dt>Location</dt>
-              <dd>Ho Chi Minh City, Viet Nam</dd>
-            </div>
-            <div>
-              <dt>Local Time</dt>
-              <dd><span id="local-time">00:00</span> <span class="overview-meta">GMT+7</span></dd>
-            </div>
-            <div>
-              <dt>Email</dt>
-              <dd><a href="mailto:unbroken.akp@gmail.com">unbroken.akp@gmail.com</a></dd>
-            </div>
-            <div>
-              <dt>Website</dt>
-              <dd><a href="#top">This portfolio</a></dd>
-            </div>
-            <div>
-              <dt>Pronouns</dt>
-              <dd>he/him</dd>
-            </div>
-          </dl>
-
-          <div class="social-links" aria-label="Social links">
-            <a href="https://github.com/MileFisher" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/in/aung-khant-paing-8b4699326/" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a href="mailto:unbroken.akp@gmail.com">Email</a>
-          </div>
-        </section>
-
-        <section class="panel sidebar-card reveal" data-delay="80">
-          <p class="eyebrow">Current Direction</p>
-          <h2>Projects that connect implementation with real use.</h2>
-          <p>
-            My strongest work lives between full-stack applications, AI-assisted workflows,
-            and delivery-minded system design.
-          </p>
-
-          <ul class="compact-list">
-            <li>Building Guardrail LMS around telemetry, signed events, and AI-guided learning.</li>
-            <li>Exploring research-oriented AI systems for knee joint analysis and diagnosis.</li>
-            <li>Growing from frontend implementation into broader backend and deployment ownership.</li>
-          </ul>
-        </section>
-
-        <section class="panel sidebar-card reveal" data-delay="140">
-          <p class="eyebrow">Highlights</p>
-
-          <div class="stat-grid">
-            <article class="stat-tile">
-              <span class="stat-tile__value">75%</span>
-              <span class="stat-tile__label">Scholarship</span>
-            </article>
-            <article class="stat-tile">
-              <span class="stat-tile__value">2025</span>
-              <span class="stat-tile__label">FPT IS intern</span>
-            </article>
-            <article class="stat-tile">
-              <span class="stat-tile__value">6.0</span>
-              <span class="stat-tile__label">IELTS overall</span>
-            </article>
-            <article class="stat-tile">
-              <span class="stat-tile__value">N5</span>
-              <span class="stat-tile__label">JLPT</span>
-            </article>
-          </div>
-        </section>
+      <div class="topbar__actions">
+        <a class="topbar__link" href="#projects">Projects</a>
+        <a class="topbar__link" href="assets/AungKhantPaing-CV.pdf" target="_blank" rel="noreferrer">CV</a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">
+          dark
+        </button>
       </div>
-    </aside>
+    </header>
 
-    <main class="content-column" id="top">
-      <nav class="section-nav reveal" aria-label="Primary navigation" data-delay="40">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#team">Teamwork</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </nav>
+    <main class="portfolio" id="top">
+      <section class="profile-cover screen-line-top screen-line-bottom" id="profile-cover" aria-label="Portfolio cover">
+        <div class="profile-cover__grid" aria-hidden="true"></div>
+        <div class="profile-cover__mark">
+          <span class="profile-cover__monogram">AKP</span>
+          <span class="profile-cover__subline">software engineering / tdtu</span>
+        </div>
+      </section>
 
-      <section class="panel intro-card reveal" data-delay="60">
-        <div class="section-heading">
-          <p class="eyebrow">Overview</p>
-          <h2>Learning by building, refining, and shipping.</h2>
+      <section class="profile-header screen-line-bottom">
+        <div class="profile-header__avatar">
+          <div class="avatar-badge" aria-hidden="true">
+            <span>AKP</span>
+          </div>
         </div>
 
-        <div class="intro-grid">
-          <p class="intro-copy">
-            I am a third-year Software Engineering student at Ton Duc Thang University,
-            currently studying on a 75% scholarship and building experience through
-            full-stack, AI, database, and deployment-focused projects.
+        <div class="profile-header__content">
+          <div class="profile-header__meta" aria-hidden="true">
+            text-3xl text-zinc-950 font-semibold
+          </div>
+
+          <div class="profile-header__title-row">
+            <h1>Aung Khant Paing</h1>
+            <span class="status-dot" aria-label="Available for new opportunities"></span>
+          </div>
+
+          <p class="profile-header__flipline">
+            <span id="flip-line" aria-live="polite">Building practical systems. Small details matter.</span>
           </p>
+        </div>
+      </section>
 
-          <div class="focus-cluster" aria-label="Focus areas">
-            <span>Full-Stack Web</span>
-            <span>AI Workflows</span>
-            <span>Databases</span>
-            <span>DevOps</span>
-            <span>System Design</span>
-            <span>Team Leadership</span>
+      <div class="separator" aria-hidden="true"></div>
+
+      <section class="panel" id="overview">
+        <h2 class="sr-only">Overview</h2>
+
+        <div class="panel__body panel__body--stack">
+          <div class="overview-jobs">
+            <div class="intro-row">
+              <span class="intro-icon">SE</span>
+              <p>Software Engineering Student @ <a href="#education">Ton Duc Thang University</a></p>
+            </div>
+
+            <div class="intro-row">
+              <span class="intro-icon">TL</span>
+              <p>Team Leader @ <a href="#experience-clc">Creative Language Center, TDTU</a></p>
+            </div>
+
+            <div class="intro-row">
+              <span class="intro-icon">NE</span>
+              <p>Former Network Engineering Intern @ <a href="#experience-fpt">FPT IS</a></p>
+            </div>
+          </div>
+
+          <div class="overview-grid">
+            <div class="intro-row">
+              <span class="intro-icon">MP</span>
+              <p>Ho Chi Minh City, Viet Nam</p>
+            </div>
+
+            <div class="intro-row">
+              <span class="intro-icon">TZ</span>
+              <p><span id="local-time">00:00</span> <span class="muted-inline">// GMT+7</span></p>
+            </div>
+
+            <div class="intro-row">
+              <span class="intro-icon">EM</span>
+              <p><a href="mailto:unbroken.akp@gmail.com">unbroken.akp@gmail.com</a></p>
+            </div>
+
+            <div class="intro-row">
+              <span class="intro-icon">WB</span>
+              <p><a href="#top">This portfolio</a></p>
+            </div>
+
+            <div class="intro-row">
+              <span class="intro-icon">IN</span>
+              <p><a href="https://www.linkedin.com/in/aung-khant-paing-8b4699326/" target="_blank" rel="noreferrer">LinkedIn profile</a></p>
+            </div>
+
+            <div class="intro-row">
+              <span class="intro-icon">PR</span>
+              <p>he/him</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="panel section-card reveal js-section" id="about" data-delay="80">
-        <div class="section-heading">
-          <p class="eyebrow">About</p>
-          <h2>Building reliable applications from frontend to deployment.</h2>
-        </div>
+      <section class="panel panel--social">
+        <h2 class="sr-only">Social Links</h2>
 
-        <div class="split-grid">
-          <div class="prose-stack">
-            <p>
-              I work across web development, applied AI, database systems, infrastructure,
-              and collaborative coursework with hands-on experience in JavaScript, Python,
-              Java, C#, React, Node.js, FastAPI, SQL systems, Docker, and GitHub workflows.
-            </p>
-            <p>
-              I am especially drawn to practical systems, whether that means improving
-              academic integrity, building service-oriented platforms, supporting AI-assisted
-              healthcare ideas, working on C# applications, or exploring ERP and Odoo-based workflows.
-            </p>
-            <p>
-              Right now I am balancing product thinking with technical depth, trying to make
-              every project clearer to use, better structured underneath, and easier to deliver as a team.
-            </p>
+        <div class="social-grid">
+          <a class="social-link" href="https://github.com/MileFisher" target="_blank" rel="noreferrer">
+            <span class="social-link__icon">GH</span>
+            <span class="social-link__title">GitHub</span>
+            <span class="social-link__arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="social-link" href="https://www.linkedin.com/in/aung-khant-paing-8b4699326/" target="_blank" rel="noreferrer">
+            <span class="social-link__icon">IN</span>
+            <span class="social-link__title">LinkedIn</span>
+            <span class="social-link__arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="social-link" href="mailto:unbroken.akp@gmail.com">
+            <span class="social-link__icon">EM</span>
+            <span class="social-link__title">Email</span>
+            <span class="social-link__arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="social-link" href="assets/AungKhantPaing-CV.pdf" target="_blank" rel="noreferrer">
+            <span class="social-link__icon">CV</span>
+            <span class="social-link__title">Curriculum Vitae</span>
+            <span class="social-link__arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="social-link" href="https://github.com/MileFisher/Guardrail_LMS" target="_blank" rel="noreferrer">
+            <span class="social-link__icon">GL</span>
+            <span class="social-link__title">Guardrail LMS</span>
+            <span class="social-link__arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="social-link" href="https://github.com/MileFisher/DevOps_final" target="_blank" rel="noreferrer">
+            <span class="social-link__icon">DO</span>
+            <span class="social-link__title">DevOps Final</span>
+            <span class="social-link__arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </section>
+
+      <div class="separator" aria-hidden="true"></div>
+
+      <section class="panel" id="about">
+        <header class="panel__header">
+          <h2 class="panel__title">About</h2>
+        </header>
+
+        <div class="panel__body prose-block">
+          <ul class="about-list">
+            <li>Software Engineering student focused on full-stack web development, applied AI, database systems, and deployment workflows.</li>
+            <li>Hands-on with JavaScript, Python, Java, C#, React, Node.js, FastAPI, SQL systems, Docker, GitHub Actions, Terraform, and Ansible.</li>
+            <li>Interested in systems that solve real problems, especially academic integrity tooling, AI-assisted healthcare ideas, service-oriented platforms, and enterprise workflows.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="panel" id="skills">
+        <h2 class="sr-only">Tech Stack</h2>
+
+        <div class="panel__body">
+          <ul class="tag-list">
+            <li>React</li>
+            <li>Node.js</li>
+            <li>Express</li>
+            <li>FastAPI</li>
+            <li>PostgreSQL</li>
+            <li>MongoDB</li>
+            <li>SQL Server</li>
+            <li>Docker</li>
+            <li>GitHub Actions</li>
+            <li>Terraform</li>
+            <li>Ansible</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>C#</li>
+            <li>Java</li>
+            <li>PyTorch</li>
+            <li>Computer Vision</li>
+            <li>Microservices</li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="separator" aria-hidden="true"></div>
+
+      <section class="panel" id="experience">
+        <header class="panel__header">
+          <h2 class="panel__title">Experience</h2>
+        </header>
+
+        <div class="panel__body panel__body--flush">
+          <article class="experience-card" id="experience-fpt">
+            <div class="experience-card__head">
+              <span class="experience-card__mark">FI</span>
+              <div>
+                <h3>FPT IS</h3>
+                <p>Network Engineering Intern</p>
+              </div>
+            </div>
+
+            <div class="experience-card__timeline">
+              <div class="position-item">
+                <div class="position-item__marker"></div>
+                <div>
+                  <div class="position-item__title">Internship, 08 Apr 2025 - 07 Jul 2025</div>
+                  <p>Focused on networking fundamentals and used Cisco Packet Tracer to strengthen configuration and setup knowledge.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="experience-card" id="experience-clc">
+            <div class="experience-card__head">
+              <span class="experience-card__mark">CL</span>
+              <div>
+                <h3>Creative Language Center, TDTU</h3>
+                <p>Leadership and support roles</p>
+              </div>
+            </div>
+
+            <div class="experience-card__timeline">
+              <div class="position-item">
+                <div class="position-item__marker"></div>
+                <div>
+                  <div class="position-item__title">Media and Design Team Leader, 2023 - Current</div>
+                  <p>Leading visual communication work and supporting team coordination, planning, and delivery.</p>
+                </div>
+              </div>
+
+              <div class="position-item">
+                <div class="position-item__marker"></div>
+                <div>
+                  <div class="position-item__title">Teaching Assistant, previous role</div>
+                  <p>Supported classroom and center activities before moving into the design and media team.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="experience-card">
+            <div class="experience-card__head">
+              <span class="experience-card__mark">TR</span>
+              <div>
+                <h3>Independent Translation Work</h3>
+                <p>Part-time translator</p>
+              </div>
+            </div>
+
+            <div class="experience-card__timeline">
+              <div class="position-item">
+                <div class="position-item__marker"></div>
+                <div>
+                  <div class="position-item__title">Translator, 2020 - 2024</div>
+                  <p>Translated English movie subtitles into Myanmar, improving precision, consistency, and editorial discipline.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <div class="separator" aria-hidden="true"></div>
+
+      <section class="panel" id="projects">
+        <header class="panel__header">
+          <h2 class="panel__title">Projects <span class="panel__count">[4]</span></h2>
+        </header>
+
+        <div class="project-list">
+          <details class="project-item" open>
+            <summary class="project-item__summary">
+              <span class="project-item__logo">GL</span>
+
+              <span class="project-item__heading">
+                <span class="project-item__title">Guardrail LMS</span>
+                <span class="project-item__meta">2025</span>
+              </span>
+
+              <span class="project-item__caret" aria-hidden="true">⌄</span>
+            </summary>
+
+            <div class="project-item__content">
+              <p class="project-item__repo-row"><a class="project-item__repo" href="https://github.com/MileFisher/Guardrail_LMS" target="_blank" rel="noreferrer">Open repository</a></p>
+              <p>A process-based academic integrity platform with telemetry monitoring, signed events, anomaly detection, and an AI-guided tutor for non-assessed study sessions.</p>
+              <ul class="tag-list">
+                <li>React</li>
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>PostgreSQL</li>
+                <li>Render</li>
+                <li>Cloudflare Pages</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="project-item">
+            <summary class="project-item__summary">
+              <span class="project-item__logo">AI</span>
+
+              <span class="project-item__heading">
+                <span class="project-item__title">AI Clinical Navigator</span>
+                <span class="project-item__meta">In Progress</span>
+              </span>
+
+              <span class="project-item__caret" aria-hidden="true">⌄</span>
+            </summary>
+
+            <div class="project-item__content">
+              <p class="project-item__repo-row"><a class="project-item__repo" href="https://github.com/qchau0202/ai-clinical-navigator" target="_blank" rel="noreferrer">Open repository</a></p>
+              <p>A team project for AI-assisted healthcare where the frontend is complete, the model is trained, and the remaining milestone is full model integration.</p>
+              <ul class="tag-list">
+                <li>React</li>
+                <li>Frontend</li>
+                <li>AI Workflow</li>
+                <li>Team Collaboration</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="project-item">
+            <summary class="project-item__summary">
+              <span class="project-item__logo">DB</span>
+
+              <span class="project-item__heading">
+                <span class="project-item__title">Advanced DB Final</span>
+                <span class="project-item__meta">Team System</span>
+              </span>
+
+              <span class="project-item__caret" aria-hidden="true">⌄</span>
+            </summary>
+
+            <div class="project-item__content">
+              <p class="project-item__repo-row"><a class="project-item__repo" href="https://github.com/SawBawMuThaw/advanced-db-final" target="_blank" rel="noreferrer">Open repository</a></p>
+              <p>A fundraising platform built as a multi-service system with FastAPI, SQL Server, MongoDB, Stripe, an API gateway, and saga orchestration.</p>
+              <ul class="tag-list">
+                <li>Python</li>
+                <li>FastAPI</li>
+                <li>SQL Server</li>
+                <li>MongoDB</li>
+                <li>Stripe</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="project-item">
+            <summary class="project-item__summary">
+              <span class="project-item__logo">DO</span>
+
+              <span class="project-item__heading">
+                <span class="project-item__title">DevOps Final Project</span>
+                <span class="project-item__meta">Ops Focus</span>
+              </span>
+
+              <span class="project-item__caret" aria-hidden="true">⌄</span>
+            </summary>
+
+            <div class="project-item__content">
+              <p class="project-item__repo-row"><a class="project-item__repo" href="https://github.com/MileFisher/DevOps_final" target="_blank" rel="noreferrer">Open repository</a></p>
+              <p>Coursework centered on collaborative delivery, CI/CD workflows, infrastructure automation, and the operational side of software engineering.</p>
+              <ul class="tag-list">
+                <li>GitHub Actions</li>
+                <li>Terraform</li>
+                <li>Ansible</li>
+                <li>JavaScript</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <div class="separator" aria-hidden="true"></div>
+
+      <section class="panel" id="education">
+        <header class="panel__header">
+          <h2 class="panel__title">Education and Highlights</h2>
+        </header>
+
+        <div class="panel__body two-column-grid">
+          <div class="stack-list">
+            <h3>Education</h3>
+            <ul class="info-list">
+              <li>
+                <strong>Ton Duc Thang University</strong>
+                <span>2023 - Current</span>
+                <p>Third-year Software Engineering student with a 75% scholarship.</p>
+              </li>
+              <li>
+                <strong>University of Dental Medicine (Mandalay)</strong>
+                <span>2016 - 2020</span>
+                <p>An earlier academic path that was interrupted during COVID-19 before I moved into software engineering.</p>
+              </li>
+            </ul>
           </div>
 
-          <div class="mini-panel-grid">
-            <article class="mini-panel">
-              <span class="mini-panel__index">01</span>
-              <h3>Build the product</h3>
-              <p>Create interfaces and flows that make technical systems easier to trust and use.</p>
-            </article>
-
-            <article class="mini-panel">
-              <span class="mini-panel__index">02</span>
-              <h3>Shape the system</h3>
-              <p>Work across APIs, services, databases, and enterprise tools with attention to structure.</p>
-            </article>
-
-            <article class="mini-panel">
-              <span class="mini-panel__index">03</span>
-              <h3>Deliver the work</h3>
-              <p>Use version control, deployment workflows, and automation to move projects forward cleanly.</p>
-            </article>
+          <div class="stack-list">
+            <h3>Highlights</h3>
+            <ul class="info-list">
+              <li>
+                <strong>75% Scholarship</strong>
+                <span>Academic support</span>
+                <p>Maintaining strong performance while building practical systems through coursework and side projects.</p>
+              </li>
+              <li>
+                <strong>IELTS 6.0 and JLPT N5</strong>
+                <span>Language milestones</span>
+                <p>Comfortable working across multilingual academic and collaborative environments.</p>
+              </li>
+              <li>
+                <strong>AI Research Interest</strong>
+                <span>Current direction</span>
+                <p>Exploring artificial intelligence systems for knee joint analysis and diagnosis.</p>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
 
-      <section class="panel section-card reveal js-section" id="experience" data-delay="100">
-        <div class="section-heading">
-          <p class="eyebrow">Experience</p>
-          <h2>The background behind the projects.</h2>
-        </div>
+      <div class="separator" aria-hidden="true"></div>
 
-        <div class="timeline-grid">
-          <article class="subpanel">
-            <div class="subpanel__heading">
-              <h3>Work Experience</h3>
-              <p>Roles that shaped how I work with systems and teams.</p>
-            </div>
+      <section class="panel" id="teamwork">
+        <header class="panel__header">
+          <h2 class="panel__title">Collaborative Work</h2>
+        </header>
 
-            <ul class="timeline-list">
+        <div class="panel__body two-column-grid">
+          <div class="stack-list">
+            <h3>Team Repositories</h3>
+            <ul class="info-list">
               <li>
-                <div class="timeline-list__topline">
-                  <h4>Network Engineering Intern - FPT IS</h4>
-                  <span>08 Apr 2025 - 07 Jul 2025</span>
-                </div>
-                <p>Focused on core networking principles and used Cisco Packet Tracer to strengthen configuration and setup knowledge.</p>
+                <strong><a href="https://github.com/MannDHHarry/Mobile_App_Wallet_Final" target="_blank" rel="noreferrer">Mobile App Wallet Final</a></strong>
+                <span>Android / Java</span>
+                <p>Wallet application built with Java and Gradle.</p>
               </li>
               <li>
-                <div class="timeline-list__topline">
-                  <h4>Media and Design Team Leader - Creative Language Center, TDTU</h4>
-                  <span>2023 - Current</span>
-                </div>
-                <p>Started as a volunteer and now lead the Media and Design Team, supporting communication, coordination, and creative delivery.</p>
+                <strong><a href="https://github.com/Saw-Baw-Mu-Thaw/soa-final" target="_blank" rel="noreferrer">SOA Final</a></strong>
+                <span>Microservices</span>
+                <p>Learning Management System built around service-oriented architecture.</p>
               </li>
               <li>
-                <div class="timeline-list__topline">
-                  <h4>Part-time Translator</h4>
-                  <span>2020 - 2024</span>
-                </div>
-                <p>Translated English movie subtitles into Myanmar for a website, building consistency and language precision.</p>
-              </li>
-              <li>
-                <div class="timeline-list__topline">
-                  <h4>Teaching Assistant</h4>
-                  <span>Previous role</span>
-                </div>
-                <p>Previously supported the Creative Language Center of Ton Duc Thang University as a teaching assistant.</p>
+                <strong><a href="https://github.com/Saw-Baw-Mu-Thaw/PE2TicketingSystem" target="_blank" rel="noreferrer">PE2 Ticketing System</a></strong>
+                <span>C# / Desktop</span>
+                <p>Visual Studio team project for a ticketing workflow.</p>
               </li>
             </ul>
-          </article>
+          </div>
 
-          <article class="subpanel">
-            <div class="subpanel__heading">
-              <h3>Education</h3>
-              <p>The route that brought me into software engineering.</p>
-            </div>
-
-            <ul class="timeline-list">
+          <div class="stack-list">
+            <h3>How I Contribute</h3>
+            <ul class="info-list">
               <li>
-                <div class="timeline-list__topline">
-                  <h4>Ton Duc Thang University</h4>
-                  <span>2023 - Current</span>
-                </div>
-                <p>Third-year Software Engineering student and recipient of a 75% scholarship.</p>
+                <strong>Interface and flow work</strong>
+                <span>Frontend contribution</span>
+                <p>Building usable screens and interaction flows that clarify technical systems.</p>
               </li>
               <li>
-                <div class="timeline-list__topline">
-                  <h4>University of Dental Medicine (Mandalay)</h4>
-                  <span>2016 - 2020</span>
-                </div>
-                <p>My earlier academic path in dentistry was interrupted during COVID-19, which later redirected me toward software engineering.</p>
+                <strong>Backend and data support</strong>
+                <span>System contribution</span>
+                <p>Working across APIs, services, relational databases, and document stores as systems become more complex.</p>
+              </li>
+              <li>
+                <strong>Delivery mindset</strong>
+                <span>Operational contribution</span>
+                <p>Helping projects move toward runnable, testable, and deployable results.</p>
               </li>
             </ul>
-          </article>
-
-          <article class="subpanel subpanel--accent">
-            <div class="subpanel__heading">
-              <h3>Credentials</h3>
-              <p>Signals of progress alongside coursework and project work.</p>
-            </div>
-
-            <div class="badge-grid">
-              <div class="badge-tile">
-                <strong>75%</strong>
-                <span>Scholarship support</span>
-              </div>
-              <div class="badge-tile">
-                <strong>6.0</strong>
-                <span>IELTS overall</span>
-              </div>
-              <div class="badge-tile">
-                <strong>N5</strong>
-                <span>JLPT level</span>
-              </div>
-              <div class="badge-tile">
-                <strong>2023+</strong>
-                <span>Volunteer leadership</span>
-              </div>
-            </div>
-          </article>
+          </div>
         </div>
       </section>
-
-      <section class="panel section-card reveal js-section" id="projects" data-delay="120">
-        <div class="section-heading">
-          <p class="eyebrow">Projects</p>
-          <h2>Work that shows how I think through systems, not just screens.</h2>
-        </div>
-
-        <div class="projects-grid">
-          <article class="project-card">
-            <div class="project-card__topline">
-              <span class="status-pill">Featured</span>
-              <a href="https://github.com/MileFisher/Guardrail_LMS" target="_blank" rel="noreferrer">View Repo</a>
-            </div>
-            <h3>Guardrail LMS</h3>
-            <p>
-              A process-based academic integrity platform with telemetry monitoring, signed events,
-              anomaly detection, and an AI-guided tutor for non-assessed study sessions.
-            </p>
-            <ul class="chip-list">
-              <li>React</li>
-              <li>Node.js</li>
-              <li>Express</li>
-              <li>PostgreSQL</li>
-              <li>Render</li>
-              <li>Cloudflare Pages</li>
-            </ul>
-          </article>
-
-          <article class="project-card">
-            <div class="project-card__topline">
-              <span class="status-pill status-pill--warm">In Progress</span>
-              <a href="https://github.com/qchau0202/ai-clinical-navigator" target="_blank" rel="noreferrer">View Repo</a>
-            </div>
-            <h3>AI Clinical Navigator</h3>
-            <p>
-              An unfinished team project for AI-assisted healthcare where I contributed to the frontend
-              and broader product direction while model integration remains the final milestone.
-            </p>
-            <ul class="chip-list">
-              <li>React</li>
-              <li>Frontend</li>
-              <li>AI Workflow</li>
-              <li>Team Collaboration</li>
-            </ul>
-          </article>
-
-          <article class="project-card">
-            <div class="project-card__topline">
-              <span class="status-pill status-pill--cool">Team Project</span>
-              <a href="https://github.com/SawBawMuThaw/advanced-db-final" target="_blank" rel="noreferrer">View Repo</a>
-            </div>
-            <h3>Advanced DB Final</h3>
-            <p>
-              A fundraising platform built as a multi-service system with FastAPI, SQL Server,
-              MongoDB, Stripe, an API gateway, and saga orchestration.
-            </p>
-            <ul class="chip-list">
-              <li>Python</li>
-              <li>FastAPI</li>
-              <li>SQL Server</li>
-              <li>MongoDB</li>
-              <li>Stripe</li>
-            </ul>
-          </article>
-
-          <article class="project-card">
-            <div class="project-card__topline">
-              <span class="status-pill status-pill--earth">Ops Focus</span>
-              <a href="https://github.com/MileFisher/DevOps_final" target="_blank" rel="noreferrer">View Repo</a>
-            </div>
-            <h3>DevOps Final Project</h3>
-            <p>
-              Coursework centered on collaborative delivery, CI/CD, infrastructure automation,
-              and the operational side of software engineering with Terraform and Ansible.
-            </p>
-            <ul class="chip-list">
-              <li>GitHub Actions</li>
-              <li>Terraform</li>
-              <li>Ansible</li>
-              <li>JavaScript</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section class="panel section-card reveal js-section" id="team" data-delay="140">
-        <div class="section-heading">
-          <p class="eyebrow">Teamwork</p>
-          <h2>Collaborative projects where contribution matters more than ownership.</h2>
-        </div>
-
-        <div class="team-grid">
-          <article class="subpanel">
-            <div class="subpanel__heading">
-              <h3>Team Repositories</h3>
-              <p>Projects where I contributed as part of a broader group effort.</p>
-            </div>
-
-            <ul class="link-list">
-              <li>
-                <a href="https://github.com/MannDHHarry/Mobile_App_Wallet_Final" target="_blank" rel="noreferrer">Mobile App Wallet Final</a>
-                <p>Android wallet application built with Java and Gradle.</p>
-              </li>
-              <li>
-                <a href="https://github.com/Saw-Baw-Mu-Thaw/soa-final" target="_blank" rel="noreferrer">SOA Final</a>
-                <p>Learning Management System built with a microservice architecture.</p>
-              </li>
-              <li>
-                <a href="https://github.com/Saw-Baw-Mu-Thaw/soa-midterm-main" target="_blank" rel="noreferrer">SOA Midterm Main</a>
-                <p>Python-based service-oriented coursework project.</p>
-              </li>
-              <li>
-                <a href="https://github.com/Saw-Baw-Mu-Thaw/PE2TicketingSystem" target="_blank" rel="noreferrer">PE2 Ticketing System</a>
-                <p>C# Visual Studio team project for a ticketing workflow.</p>
-              </li>
-              <li>
-                <a href="https://github.com/MileFisher/ibanking-tuition-payment" target="_blank" rel="noreferrer">iBanking Tuition Payment</a>
-                <p>Fintech coursework project exploring service-oriented design.</p>
-              </li>
-              <li>
-                <a href="https://github.com/MileFisher/WebFinalProject" target="_blank" rel="noreferrer">Web Final Project</a>
-                <p>PHP note-taking web application built through academic project work.</p>
-              </li>
-            </ul>
-          </article>
-
-          <article class="subpanel subpanel--accent">
-            <div class="subpanel__heading">
-              <h3>How I Contribute</h3>
-              <p>The role I usually play when a project gets bigger and more collaborative.</p>
-            </div>
-
-            <ul class="compact-list">
-              <li>Building frontend views and interaction flows that feel clear and usable.</li>
-              <li>Working across backend logic, APIs, services, and C# coursework when systems grow more complex.</li>
-              <li>Supporting database-heavy projects with both relational and document-based thinking.</li>
-              <li>Learning adjacent enterprise tools such as ERP systems and Odoo workflows.</li>
-              <li>Helping teams move toward runnable, testable, and deployable results.</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section class="panel section-card reveal js-section" id="skills" data-delay="160">
-        <div class="section-heading">
-          <p class="eyebrow">Skills</p>
-          <h2>A toolkit shaped by coursework, experiments, and team projects.</h2>
-        </div>
-
-        <div class="skills-grid">
-          <article class="skill-card">
-            <h3>Languages</h3>
-            <ul class="chip-list">
-              <li>C/C++</li>
-              <li>Python</li>
-              <li>JavaScript</li>
-              <li>Java</li>
-              <li>PHP</li>
-              <li>C#</li>
-            </ul>
-          </article>
-
-          <article class="skill-card">
-            <h3>Frontend and Web</h3>
-            <ul class="chip-list">
-              <li>React</li>
-              <li>Vite</li>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>ASP.NET</li>
-              <li>Full-stack</li>
-            </ul>
-          </article>
-
-          <article class="skill-card">
-            <h3>Backend and APIs</h3>
-            <ul class="chip-list">
-              <li>Node.js</li>
-              <li>Express</li>
-              <li>FastAPI</li>
-              <li>REST API</li>
-              <li>JSON</li>
-              <li>Microservices</li>
-            </ul>
-          </article>
-
-          <article class="skill-card">
-            <h3>AI and Data</h3>
-            <ul class="chip-list">
-              <li>PyTorch</li>
-              <li>Computer Vision</li>
-              <li>Explainable AI</li>
-              <li>AI Integration Workflows</li>
-            </ul>
-          </article>
-
-          <article class="skill-card">
-            <h3>Databases</h3>
-            <ul class="chip-list">
-              <li>MySQL</li>
-              <li>MSSQL</li>
-              <li>PostgreSQL</li>
-              <li>MongoDB</li>
-            </ul>
-          </article>
-
-          <article class="skill-card">
-            <h3>DevOps and Observability</h3>
-            <ul class="chip-list">
-              <li>Docker</li>
-              <li>GitHub Actions</li>
-              <li>Terraform</li>
-              <li>Ansible</li>
-              <li>AWS</li>
-              <li>Grafana</li>
-              <li>Prometheus</li>
-              <li>Git</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section class="panel section-card reveal js-section" id="contact" data-delay="180">
-        <div class="section-heading">
-          <p class="eyebrow">Contact</p>
-          <h2>Real details, clear links, and room to keep growing.</h2>
-        </div>
-
-        <div class="contact-grid">
-          <article class="subpanel">
-            <div class="subpanel__heading">
-              <h3>Direct Contact</h3>
-              <p>The fastest ways to reach me.</p>
-            </div>
-
-            <ul class="detail-list">
-              <li>
-                <span>Email</span>
-                <a href="mailto:unbroken.akp@gmail.com">unbroken.akp@gmail.com</a>
-              </li>
-              <li>
-                <span>Phone</span>
-                <strong>Available on request</strong>
-              </li>
-              <li>
-                <span>Location</span>
-                <strong>KTX, Ton Duc Thang University</strong>
-              </li>
-            </ul>
-          </article>
-
-          <article class="subpanel">
-            <div class="subpanel__heading">
-              <h3>Profiles</h3>
-              <p>Places where my work and history are easiest to review.</p>
-            </div>
-
-            <ul class="detail-list">
-              <li>
-                <span>GitHub</span>
-                <a href="https://github.com/MileFisher" target="_blank" rel="noreferrer">github.com/MileFisher</a>
-              </li>
-              <li>
-                <span>LinkedIn</span>
-                <a href="https://www.linkedin.com/in/aung-khant-paing-8b4699326/" target="_blank" rel="noreferrer">linkedin.com/in/aung-khant-paing-8b4699326</a>
-              </li>
-              <li>
-                <span>CV</span>
-                <a href="assets/AungKhantPaing-CV.pdf" target="_blank" rel="noreferrer">Open PDF CV</a>
-              </li>
-            </ul>
-          </article>
-
-          <article class="subpanel subpanel--cta">
-            <div class="subpanel__heading">
-              <h3>Next Step</h3>
-              <p>
-                I am looking for opportunities where I can keep growing through real software work,
-                strong collaboration, and technically meaningful systems.
-              </p>
-            </div>
-
-            <div class="profile-actions">
-              <a class="button button--secondary" href="assets/AungKhantPaing-CV.pdf" target="_blank" rel="noreferrer">
-                Open CV
-              </a>
-              <a class="button button--primary" href="mailto:unbroken.akp@gmail.com">
-                Contact Me
-              </a>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <footer class="site-footer reveal" data-delay="200">
-        <p>Built from my CV, portfolio notes, and project history.</p>
-        <p><span id="current-year"></span> Aung Khant Paing</p>
-      </footer>
     </main>
+
+    <footer class="site-footer screen-line-top screen-line-bottom">
+      <p>Built from my CV, portfolio notes, and project history.</p>
+      <p><span id="current-year"></span> Aung Khant Paing</p>
+    </footer>
   </div>
 </body>
 </html>

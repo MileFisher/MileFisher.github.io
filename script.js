@@ -1,62 +1,17 @@
-const revealNodes = document.querySelectorAll(".reveal");
-const navLinks = document.querySelectorAll(".section-nav a");
-const sections = [...navLinks]
-  .map((link) => document.querySelector(link.getAttribute("href")))
-  .filter(Boolean);
-const currentYear = document.querySelector("#current-year");
 const themeToggle = document.querySelector("#theme-toggle");
 const localTimeNode = document.querySelector("#local-time");
+const currentYear = document.querySelector("#current-year");
+const flipLine = document.querySelector("#flip-line");
+const profileCover = document.querySelector("#profile-cover");
 const themeMedia = window.matchMedia("(prefers-color-scheme: dark)");
 
-for (const node of revealNodes) {
-  const delay = Number(node.dataset.delay || 0);
-  node.style.setProperty("--reveal-delay", `${delay}ms`);
-}
+const flipSentences = [
+  "Building practical systems. Small details matter.",
+  "Full-stack development, AI workflows, and delivery-minded engineering.",
+  "Software Engineering student at TDTU with a 75% scholarship.",
+];
 
-const revealObserver = new IntersectionObserver(
-  (entries, observer) => {
-    for (const entry of entries) {
-      if (!entry.isIntersecting) {
-        continue;
-      }
-
-      entry.target.classList.add("is-visible");
-      observer.unobserve(entry.target);
-    }
-  },
-  {
-    threshold: 0.14,
-    rootMargin: "0px 0px -40px 0px",
-  }
-);
-
-for (const node of revealNodes) {
-  revealObserver.observe(node);
-}
-
-const sectionObserver = new IntersectionObserver(
-  (entries) => {
-    for (const entry of entries) {
-      if (!entry.isIntersecting) {
-        continue;
-      }
-
-      const activeId = `#${entry.target.id}`;
-
-      for (const link of navLinks) {
-        link.classList.toggle("is-active", link.getAttribute("href") === activeId);
-      }
-    }
-  },
-  {
-    threshold: 0.35,
-    rootMargin: "-10% 0px -50% 0px",
-  }
-);
-
-for (const section of sections) {
-  sectionObserver.observe(section);
-}
+let flipIndex = 0;
 
 function applyTheme(theme) {
   document.body.dataset.theme = theme;
@@ -67,9 +22,12 @@ function applyTheme(theme) {
   }
 
   const isDark = theme === "dark";
-  themeToggle.textContent = isDark ? "Light Mode" : "Dark Mode";
+  themeToggle.textContent = isDark ? "light" : "dark";
   themeToggle.setAttribute("aria-pressed", String(isDark));
-  themeToggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+  themeToggle.setAttribute(
+    "aria-label",
+    isDark ? "Switch to light theme" : "Switch to dark theme"
+  );
 }
 
 function syncThemeFromPreference() {
@@ -95,9 +53,49 @@ function updateLocalTime() {
   }).format(new Date());
 }
 
+function rotateFlipLine() {
+  if (!flipLine) {
+    return;
+  }
+
+  flipLine.classList.add("is-swapping");
+
+  window.setTimeout(() => {
+    flipIndex = (flipIndex + 1) % flipSentences.length;
+    flipLine.textContent = flipSentences[flipIndex];
+    flipLine.classList.remove("is-swapping");
+  }, 180);
+}
+
+function attachCoverSpotlight() {
+  if (!profileCover) {
+    return;
+  }
+
+  const resetSpotlight = () => {
+    profileCover.style.setProperty("--spotlight-x", "50%");
+    profileCover.style.setProperty("--spotlight-y", "50%");
+  };
+
+  profileCover.addEventListener("pointermove", (event) => {
+    const rect = profileCover.getBoundingClientRect();
+    const x = ((event.clientX - rect.left) / rect.width) * 100;
+    const y = ((event.clientY - rect.top) / rect.height) * 100;
+
+    profileCover.style.setProperty("--spotlight-x", `${x}%`);
+    profileCover.style.setProperty("--spotlight-y", `${y}%`);
+  });
+
+  profileCover.addEventListener("pointerleave", resetSpotlight);
+  resetSpotlight();
+}
+
 syncThemeFromPreference();
 updateLocalTime();
-setInterval(updateLocalTime, 60000);
+attachCoverSpotlight();
+
+window.setInterval(updateLocalTime, 60000);
+window.setInterval(rotateFlipLine, 3200);
 
 themeMedia.addEventListener("change", () => {
   if (!localStorage.getItem("portfolio-theme")) {
