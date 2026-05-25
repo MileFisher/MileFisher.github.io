@@ -155,6 +155,13 @@ ul {
   padding: 0 0 2rem;
 }
 
+.icon-sprite {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
 .portfolio {
   display: grid;
 }
@@ -248,15 +255,31 @@ ul {
 }
 
 .theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
   padding: 0;
-  border: 0;
-  background: transparent;
+  border: 1px solid color-mix(in srgb, var(--muted-foreground) 18%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 72%, transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--line) 70%, transparent);
   cursor: pointer;
 }
 
 .theme-toggle:hover,
 .topbar__link:hover {
   color: var(--foreground);
+}
+
+.theme-toggle:hover {
+  background: color-mix(in srgb, var(--accent) 92%, transparent);
+}
+
+.theme-toggle__icon {
+  width: 1rem;
+  height: 1rem;
 }
 
 .profile-cover {
@@ -500,11 +523,31 @@ ul {
   width: 1.85rem;
   height: 1.85rem;
   border: 1px solid color-mix(in srgb, var(--muted-foreground) 15%, transparent);
-  background: var(--accent);
+  border-radius: 0.72rem;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--background) 92%, transparent), color-mix(in srgb, var(--accent) 82%, transparent));
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--line) 72%, transparent);
   color: var(--muted-foreground);
   font-family: var(--font-mono);
   font-size: 0.72rem;
   line-height: 1;
+  overflow: hidden;
+}
+
+.intro-icon svg,
+.social-link__icon svg {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+}
+
+.social-link__icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.social-link__icon svg {
+  width: 1.12rem;
+  height: 1.12rem;
 }
 
 .muted-inline {
@@ -569,6 +612,13 @@ ul {
 .social-link__arrow {
   color: var(--muted-foreground);
   font-family: var(--font-mono);
+  font-size: 0;
+}
+
+.social-link__arrow::before {
+  content: "\2197";
+  font-size: 1rem;
+  line-height: 1;
 }
 
 .prose-block,
@@ -590,6 +640,56 @@ ul {
 .tag-list,
 .info-list {
   list-style: none;
+}
+
+.stack-panel {
+  display: grid;
+  gap: 0.95rem;
+}
+
+.stack-intro {
+  color: var(--muted-foreground);
+  font-size: 0.96rem;
+}
+
+.stack-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem 0.55rem;
+  list-style: none;
+}
+
+.stack-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  min-height: 2.45rem;
+  padding: 0.3rem 0.95rem 0.3rem 0.42rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 78%, transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--border) 82%, transparent);
+}
+
+.stack-pill__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 0.55rem;
+  background: var(--stack-accent, var(--foreground));
+  color: var(--stack-ink, #ffffff);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, #ffffff 14%, transparent);
+}
+
+.stack-pill__label {
+  font-size: 0.98rem;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
 }
 
 .tag-list {
@@ -614,7 +714,7 @@ ul {
   padding: 1rem 0;
 }
 
-.experience-card + .experience-card {
+.experience-card+.experience-card {
   border-top: 1px solid var(--line);
 }
 
@@ -734,7 +834,14 @@ ul {
   margin-left: auto;
   color: var(--muted-foreground);
   font-family: var(--font-mono);
+  font-size: 0;
   transition: transform 160ms ease;
+}
+
+.project-item__caret::before {
+  content: "\2304";
+  font-size: 1rem;
+  line-height: 1;
 }
 
 .project-item[open] .project-item__caret {
@@ -841,10 +948,15 @@ ul {
 }
 
 @media (max-width: 720px) {
+
   .topbar,
   .site-footer {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .topbar__actions {
+    flex-wrap: wrap;
   }
 
   .profile-header {
@@ -896,6 +1008,26 @@ ul {
 
   .social-link {
     padding: 0.9rem 0.85rem;
+  }
+
+  .stack-cloud {
+    gap: 0.55rem 0.45rem;
+  }
+
+  .stack-pill {
+    min-height: 2.2rem;
+    padding: 0.24rem 0.76rem 0.24rem 0.36rem;
+  }
+
+  .stack-pill__icon {
+    width: 1.55rem;
+    height: 1.55rem;
+    font-size: 0.66rem;
+  }
+
+  .stack-pill__label,
+  .stack-intro {
+    font-size: 0.9rem;
   }
 
   .profile-cover__monogram {

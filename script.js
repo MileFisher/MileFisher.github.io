@@ -1,4 +1,5 @@
 const themeToggle = document.querySelector("#theme-toggle");
+const themeToggleIcon = themeToggle?.querySelector("use");
 const localTimeNode = document.querySelector("#local-time");
 const currentYear = document.querySelector("#current-year");
 const flipLine = document.querySelector("#flip-line");
@@ -7,8 +8,8 @@ const themeMedia = window.matchMedia("(prefers-color-scheme: dark)");
 
 const flipSentences = [
   "Building practical systems. Small details matter.",
-  "Full-stack development, AI workflows, and delivery-minded engineering.",
-  "Software Engineering student at TDTU with a 75% scholarship.",
+  "Full-stack development, AI workflows, ERP tools, and delivery-minded engineering.",
+  "studying at TDTU with scholarships",
 ];
 
 let flipIndex = 0;
@@ -22,12 +23,15 @@ function applyTheme(theme) {
   }
 
   const isDark = theme === "dark";
-  themeToggle.textContent = isDark ? "light" : "dark";
   themeToggle.setAttribute("aria-pressed", String(isDark));
   themeToggle.setAttribute(
     "aria-label",
     isDark ? "Switch to light theme" : "Switch to dark theme"
   );
+
+  if (themeToggleIcon) {
+    themeToggleIcon.setAttribute("href", isDark ? "#icon-sun" : "#icon-moon");
+  }
 }
 
 function syncThemeFromPreference() {

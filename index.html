@@ -1,17 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta
-    name="description"
-    content="Portfolio of Aung Khant Paing, a Software Engineering student at Ton Duc Thang University focused on full-stack systems, AI-assisted products, database architecture, and deployment workflows."
-  >
+  <meta name="description"
+    content="Portfolio of Aung Khant Paing, a Software Engineering student at Ton Duc Thang University focused on full-stack systems, AI-assisted products, database architecture, and deployment workflows.">
   <title>Aung Khant Paing | Portfolio</title>
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
+
 <body data-theme="light">
+  <svg class="icon-sprite" aria-hidden="true">
+    <symbol id="icon-code-xml" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 8 4 12l4 4"></path>
+        <path d="M16 8l4 4-4 4"></path>
+        <path d="M14 4l-4 16"></path>
+      </g>
+    </symbol>
+    <symbol id="icon-lightbulb" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 18h6"></path>
+        <path d="M10 21h4"></path>
+        <path
+          d="M8.79 15.25h6.42l.29-.75c.3-.78.86-1.48 1.61-2.12A5.5 5.5 0 1 0 6.89 12.38c.75.64 1.31 1.34 1.61 2.12l.29.75Z">
+        </path>
+      </g>
+    </symbol>
+    <symbol id="icon-briefcase" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3.5" y="6.5" width="17" height="12" rx="2"></rect>
+        <path d="M9 6.5v-1A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5v1"></path>
+        <path d="M3.5 11.5h17"></path>
+        <path d="M10 11.5v2h4v-2"></path>
+      </g>
+    </symbol>
+    <symbol id="icon-map-pin" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 20.5s5.5-5 5.5-10a5.5 5.5 0 1 0-11 0c0 5 5.5 10 5.5 10Z"></path>
+        <circle cx="12" cy="10.5" r="1.75"></circle>
+      </g>
+    </symbol>
+    <symbol id="icon-clock" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="8.5"></circle>
+        <path d="M12 7.5v4.8l3 1.7"></path>
+      </g>
+    </symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3.5" y="5.5" width="17" height="13" rx="2"></rect>
+        <path d="m4.75 7 7.25 5.75L19.25 7"></path>
+      </g>
+    </symbol>
+    <symbol id="icon-link" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 14 15 9"></path>
+        <path d="M10.5 8.5a3 3 0 0 0-4.24 0L3.5 11.26a3 3 0 1 0 4.24 4.24L9.5 13.74"></path>
+        <path d="M13.5 10.26 15.26 8.5a3 3 0 0 1 4.24 4.24l-2.76 2.76a3 3 0 0 1-4.24 0"></path>
+      </g>
+    </symbol>
+    <symbol id="icon-mars" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="10" cy="14" r="4.5"></circle>
+        <path d="M13.18 10.82 20 4"></path>
+        <path d="M15.5 4H20v4.5"></path>
+      </g>
+    </symbol>
+    <symbol id="icon-file" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 3.5H9A2.5 2.5 0 0 0 6.5 6v12A2.5 2.5 0 0 0 9 20.5h6A2.5 2.5 0 0 0 17.5 18V7Z"></path>
+        <path d="M14 3.5V7h3.5"></path>
+        <path d="M9.5 11h5"></path>
+        <path d="M9.5 14h5"></path>
+        <path d="M9.5 17h3.5"></path>
+      </g>
+    </symbol>
+    <symbol id="icon-shield" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3.5 18.5 6v5.25c0 4.28-2.4 7.32-6.5 9.25-4.1-1.93-6.5-4.97-6.5-9.25V6Z"></path>
+        <path d="m9.5 12 1.75 1.75L14.75 10"></path>
+      </g>
+    </symbol>
+    <symbol id="icon-terminal" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3.5" y="4.5" width="17" height="15" rx="2"></rect>
+        <path d="m7 8.5 4 4-4 4"></path>
+        <path d="M13 16.5h4"></path>
+      </g>
+    </symbol>
+    <symbol id="icon-github" viewBox="0 0 24 24">
+      <path
+        d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+        fill="currentColor"></path>
+    </symbol>
+    <symbol id="icon-linkedin" viewBox="0 0 24 24">
+      <path
+        d="M21.418 1H2.584C1.634 1 1 1.628 1 2.572v18.855C1 22.373 1.792 23 2.583 23h18.834c.95 0 1.583-.628 1.583-1.572V2.573C23.001 1.627 22.367 1 21.418 1ZM7.49 19.7H4.166V9.172h3.323L7.49 19.7ZM5.906 7.757c-1.108 0-1.898-.785-1.898-1.885S4.8 3.985 5.906 3.985c1.11 0 1.9.787 1.9 1.887s-.95 1.885-1.9 1.885ZM19.836 19.7h-3.324v-5.028c0-1.257 0-2.83-1.742-2.83-1.74 0-1.9 1.258-1.9 2.673V19.7H9.548V9.172h3.166v1.413c.633-1.1 1.9-1.728 3.165-1.728 3.325 0 3.957 2.2 3.957 5.028V19.7Z"
+        fill="currentColor"></path>
+    </symbol>
+    <symbol id="icon-moon" viewBox="0 0 24 24">
+      <path d="M20.75 14.09A8.53 8.53 0 0 1 9.91 3.25a.75.75 0 0 0-.9-.96A9.5 9.5 0 1 0 21.71 15a.75.75 0 0 0-.96-.91Z"
+        fill="currentColor"></path>
+    </symbol>
+    <symbol id="icon-sun" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+        <circle cx="12" cy="12" r="4.25"></circle>
+        <path d="M12 2.5v2.25"></path>
+        <path d="M12 19.25v2.25"></path>
+        <path d="m4.93 4.93 1.6 1.6"></path>
+        <path d="m17.47 17.47 1.6 1.6"></path>
+        <path d="M2.5 12h2.25"></path>
+        <path d="M19.25 12h2.25"></path>
+        <path d="m4.93 19.07 1.6-1.6"></path>
+        <path d="m17.47 6.53 1.6-1.6"></path>
+      </g>
+    </symbol>
+  </svg>
   <div class="site-shell">
     <header class="topbar screen-line-top screen-line-bottom">
       <a class="topbar__brand" href="#top">AKP / Portfolio</a>
@@ -19,8 +126,11 @@
       <div class="topbar__actions">
         <a class="topbar__link" href="#projects">Projects</a>
         <a class="topbar__link" href="assets/AungKhantPaing-CV.pdf" target="_blank" rel="noreferrer">CV</a>
-        <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">
-          dark
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false"
+          aria-label="Switch to dark theme">
+          <svg class="theme-toggle__icon" aria-hidden="true">
+            <use href="#icon-moon"></use>
+          </svg>
         </button>
       </div>
     </header>
@@ -43,7 +153,7 @@
 
         <div class="profile-header__content">
           <div class="profile-header__meta" aria-hidden="true">
-            text-3xl text-zinc-950 font-semibold
+            from a country called "Myanmar"
           </div>
 
           <div class="profile-header__title-row">
@@ -65,49 +175,68 @@
         <div class="panel__body panel__body--stack">
           <div class="overview-jobs">
             <div class="intro-row">
-              <span class="intro-icon">SE</span>
+              <span class="intro-icon"><svg aria-hidden="true">
+                  <use href="#icon-code-xml"></use>
+                </svg></span>
               <p>Software Engineering Student @ <a href="#education">Ton Duc Thang University</a></p>
             </div>
 
             <div class="intro-row">
-              <span class="intro-icon">TL</span>
-              <p>Team Leader @ <a href="#experience-clc">Creative Language Center, TDTU</a></p>
+              <span class="intro-icon"><svg aria-hidden="true">
+                  <use href="#icon-lightbulb"></use>
+                </svg></span>
+              <p>Team Leader of Media & Design team @ <a href="#experience-clc">Creative Language Center, TDTU</a></p>
             </div>
 
             <div class="intro-row">
-              <span class="intro-icon">NE</span>
+              <span class="intro-icon"><svg aria-hidden="true">
+                  <use href="#icon-briefcase"></use>
+                </svg></span>
               <p>Former Network Engineering Intern @ <a href="#experience-fpt">FPT IS</a></p>
             </div>
           </div>
 
           <div class="overview-grid">
             <div class="intro-row">
-              <span class="intro-icon">MP</span>
+              <span class="intro-icon"><svg aria-hidden="true">
+                  <use href="#icon-map-pin"></use>
+                </svg></span>
               <p>Ho Chi Minh City, Viet Nam</p>
             </div>
 
             <div class="intro-row">
-              <span class="intro-icon">TZ</span>
+              <span class="intro-icon"><svg aria-hidden="true">
+                  <use href="#icon-clock"></use>
+                </svg></span>
               <p><span id="local-time">00:00</span> <span class="muted-inline">// GMT+7</span></p>
             </div>
 
             <div class="intro-row">
-              <span class="intro-icon">EM</span>
+              <span class="intro-icon"><svg aria-hidden="true">
+                  <use href="#icon-mail"></use>
+                </svg></span>
               <p><a href="mailto:unbroken.akp@gmail.com">unbroken.akp@gmail.com</a></p>
             </div>
 
             <div class="intro-row">
-              <span class="intro-icon">WB</span>
+              <span class="intro-icon"><svg aria-hidden="true">
+                  <use href="#icon-link"></use>
+                </svg></span>
               <p><a href="#top">This portfolio</a></p>
             </div>
 
             <div class="intro-row">
-              <span class="intro-icon">IN</span>
-              <p><a href="https://www.linkedin.com/in/aung-khant-paing-8b4699326/" target="_blank" rel="noreferrer">LinkedIn profile</a></p>
+              <span class="intro-icon"><svg aria-hidden="true">
+                  <use href="#icon-linkedin"></use>
+                </svg></span>
+              <p><a href="https://www.linkedin.com/in/aung-khant-paing-8b4699326/" target="_blank"
+                  rel="noreferrer">LinkedIn profile</a></p>
             </div>
 
             <div class="intro-row">
-              <span class="intro-icon">PR</span>
+              <span class="intro-icon"><svg aria-hidden="true">
+                  <use href="#icon-mars"></use>
+                </svg></span>
               <p>he/him</p>
             </div>
           </div>
@@ -119,37 +248,50 @@
 
         <div class="social-grid">
           <a class="social-link" href="https://github.com/MileFisher" target="_blank" rel="noreferrer">
-            <span class="social-link__icon">GH</span>
+            <span class="social-link__icon"><svg aria-hidden="true">
+                <use href="#icon-github"></use>
+              </svg></span>
             <span class="social-link__title">GitHub</span>
             <span class="social-link__arrow" aria-hidden="true">↗</span>
           </a>
 
-          <a class="social-link" href="https://www.linkedin.com/in/aung-khant-paing-8b4699326/" target="_blank" rel="noreferrer">
-            <span class="social-link__icon">IN</span>
+          <a class="social-link" href="https://www.linkedin.com/in/aung-khant-paing-8b4699326/" target="_blank"
+            rel="noreferrer">
+            <span class="social-link__icon"><svg aria-hidden="true">
+                <use href="#icon-linkedin"></use>
+              </svg></span>
             <span class="social-link__title">LinkedIn</span>
             <span class="social-link__arrow" aria-hidden="true">↗</span>
           </a>
 
           <a class="social-link" href="mailto:unbroken.akp@gmail.com">
-            <span class="social-link__icon">EM</span>
+            <span class="social-link__icon"><svg aria-hidden="true">
+                <use href="#icon-mail"></use>
+              </svg></span>
             <span class="social-link__title">Email</span>
             <span class="social-link__arrow" aria-hidden="true">↗</span>
           </a>
 
           <a class="social-link" href="assets/AungKhantPaing-CV.pdf" target="_blank" rel="noreferrer">
-            <span class="social-link__icon">CV</span>
-            <span class="social-link__title">Curriculum Vitae</span>
+            <span class="social-link__icon"><svg aria-hidden="true">
+                <use href="#icon-file"></use>
+              </svg></span>
+            <span class="social-link__title">CV form</span>
             <span class="social-link__arrow" aria-hidden="true">↗</span>
           </a>
 
           <a class="social-link" href="https://github.com/MileFisher/Guardrail_LMS" target="_blank" rel="noreferrer">
-            <span class="social-link__icon">GL</span>
+            <span class="social-link__icon"><svg aria-hidden="true">
+                <use href="#icon-shield"></use>
+              </svg></span>
             <span class="social-link__title">Guardrail LMS</span>
             <span class="social-link__arrow" aria-hidden="true">↗</span>
           </a>
 
           <a class="social-link" href="https://github.com/MileFisher/DevOps_final" target="_blank" rel="noreferrer">
-            <span class="social-link__icon">DO</span>
+            <span class="social-link__icon"><svg aria-hidden="true">
+                <use href="#icon-terminal"></use>
+              </svg></span>
             <span class="social-link__title">DevOps Final</span>
             <span class="social-link__arrow" aria-hidden="true">↗</span>
           </a>
@@ -165,9 +307,14 @@
 
         <div class="panel__body prose-block">
           <ul class="about-list">
-            <li>Software Engineering student focused on full-stack web development, applied AI, database systems, and deployment workflows.</li>
-            <li>Hands-on with JavaScript, Python, Java, C#, React, Node.js, FastAPI, SQL systems, Docker, GitHub Actions, Terraform, and Ansible.</li>
-            <li>Interested in systems that solve real problems, especially academic integrity tooling, AI-assisted healthcare ideas, service-oriented platforms, and enterprise workflows.</li>
+            <li>Software Engineering student focused on full-stack web development, applied AI, database systems, and
+              deployment workflows.</li>
+            <li>Hands-on with JavaScript, Python, Java, C#, React, Node.js, FastAPI, SQL systems, Docker, GitHub
+              Actions, Terraform, Ansible, and Odoo ERP workflows.</li>
+            <li>Recipient of Encouragement Scholarships for academic achievement across all four semesters of the
+              2023/24 and 2024/25 academic years.</li>
+            <li>Interested in systems that solve real problems, especially academic integrity tooling, AI-assisted
+              ideas, service-oriented platforms, and enterprise workflows.</li>
           </ul>
         </div>
       </section>
@@ -175,26 +322,52 @@
       <section class="panel" id="skills">
         <h2 class="sr-only">Tech Stack</h2>
 
-        <div class="panel__body">
-          <ul class="tag-list">
-            <li>React</li>
-            <li>Node.js</li>
-            <li>Express</li>
-            <li>FastAPI</li>
-            <li>PostgreSQL</li>
-            <li>MongoDB</li>
-            <li>SQL Server</li>
-            <li>Docker</li>
-            <li>GitHub Actions</li>
-            <li>Terraform</li>
-            <li>Ansible</li>
-            <li>JavaScript</li>
-            <li>Python</li>
-            <li>C#</li>
-            <li>Java</li>
-            <li>PyTorch</li>
-            <li>Computer Vision</li>
-            <li>Microservices</li>
+        <div class="panel__body stack-panel">
+          <p class="stack-intro">Tools and platforms I am most comfortable using across application development, ERP
+            workflows, and deployment.</p>
+          <ul class="stack-cloud" aria-label="Tech stack">
+            <li class="stack-pill"><span class="stack-pill__icon"
+                style="--stack-accent: #f7df1e; --stack-ink: #111111;">JS</span><span
+                class="stack-pill__label">JavaScript</span></li>
+            <li class="stack-pill"><span class="stack-pill__icon" style="--stack-accent: #3776ab;">PY</span><span
+                class="stack-pill__label">Python</span></li>
+            <li class="stack-pill"><span class="stack-pill__icon" style="--stack-accent: #f89820;">JV</span><span
+                class="stack-pill__label">Java</span></li>
+            <li class="stack-pill"><span class="stack-pill__icon" style="--stack-accent: #512bd4;">C#</span><span
+                class="stack-pill__label">C#</span></li>
+            <li class="stack-pill"><span class="stack-pill__icon"
+                style="--stack-accent: #61dafb; --stack-ink: #111111;">RE</span><span
+                class="stack-pill__label">React</span></li>
+            <li class="stack-pill"><span class="stack-pill__icon" style="--stack-accent: #5fa04e;">ND</span><span
+                class="stack-pill__label">Node.js</span></li>
+            <li class="stack-pill"><span class="stack-pill__icon" style="--stack-accent: #262626;">EX</span><span
+                class="stack-pill__label">Express</span></li>
+            <li class="stack-pill"><span class="stack-pill__icon" style="--stack-accent: #009688;">FA</span><span
+                class="stack-pill__label">FastAPI</span></li>
+            <li class="stack-pill"><span class="stack-pill__icon" style="--stack-accent: #336791;">PG</span><span
+                class="stack-pill__label">PostgreSQL</span></li>
+            <li class="stack-pill"><span class="stack-pill__icon" style="--stack-accent: #cc2927;">SS</span><span
+                class="stack-pill__label">SQL Server</span></li>
+            <li class="stack-pill"><span class="stack-pill__icon" style="--stack-accent: #13aa52;">MG</span><span
+                class="stack-pill__label">MongoDB</span></li>
+            <li class="stack-pill"><span class="stack-pill__icon" style="--stack-accent: #2496ed;">DK</span><span
+                class="stack-pill__label">Docker</span></li>
+            <li class="stack-pill"><span class="stack-pill__icon" style="--stack-accent: #2088ff;">GA</span><span
+                class="stack-pill__label">GitHub Actions</span></li>
+            <li class="stack-pill"><span class="stack-pill__icon" style="--stack-accent: #7b42bc;">TF</span><span
+                class="stack-pill__label">Terraform</span></li>
+            <li class="stack-pill"><span class="stack-pill__icon" style="--stack-accent: #ee0000;">AN</span><span
+                class="stack-pill__label">Ansible</span></li>
+            <li class="stack-pill"><span class="stack-pill__icon" style="--stack-accent: #7c378f;">OD</span><span
+                class="stack-pill__label">Odoo ERP</span></li>
+            <li class="stack-pill"><span class="stack-pill__icon" style="--stack-accent: #f05032;">GT</span><span
+                class="stack-pill__label">Git</span></li>
+            <li class="stack-pill"><span class="stack-pill__icon" style="--stack-accent: #ee4c2c;">PT</span><span
+                class="stack-pill__label">PyTorch</span></li>
+            <li class="stack-pill"><span class="stack-pill__icon" style="--stack-accent: #0f766e;">CV</span><span
+                class="stack-pill__label">Computer Vision</span></li>
+            <li class="stack-pill"><span class="stack-pill__icon" style="--stack-accent: #475569;">MS</span><span
+                class="stack-pill__label">Microservices</span></li>
           </ul>
         </div>
       </section>
@@ -221,7 +394,8 @@
                 <div class="position-item__marker"></div>
                 <div>
                   <div class="position-item__title">Internship, 08 Apr 2025 - 07 Jul 2025</div>
-                  <p>Focused on networking fundamentals and used Cisco Packet Tracer to strengthen configuration and setup knowledge.</p>
+                  <p>Focused on networking fundamentals and used Cisco Packet Tracer to strengthen configuration and
+                    setup knowledge.</p>
                 </div>
               </div>
             </div>
@@ -269,7 +443,8 @@
                 <div class="position-item__marker"></div>
                 <div>
                   <div class="position-item__title">Translator, 2020 - 2024</div>
-                  <p>Translated English movie subtitles into Myanmar, improving precision, consistency, and editorial discipline.</p>
+                  <p>Translated English movie subtitles into Myanmar, improving precision, consistency, and editorial
+                    discipline.</p>
                 </div>
               </div>
             </div>
@@ -287,6 +462,33 @@
         <div class="project-list">
           <details class="project-item" open>
             <summary class="project-item__summary">
+              <span class="project-item__logo">DO</span>
+
+              <span class="project-item__heading">
+                <span class="project-item__title">DevOps Final Project</span>
+                <span class="project-item__meta">Ops Focus</span>
+              </span>
+
+              <span class="project-item__caret" aria-hidden="true">⌄</span>
+            </summary>
+
+            <div class="project-item__content">
+              <p class="project-item__repo-row"><a class="project-item__repo"
+                  href="https://github.com/MileFisher/DevOps_final" target="_blank" rel="noreferrer">Open
+                  repository</a></p>
+              <p>Coursework centered on collaborative delivery, CI/CD workflows, infrastructure automation, and the
+                operational side of software engineering.</p>
+              <ul class="tag-list">
+                <li>GitHub Actions</li>
+                <li>Terraform</li>
+                <li>Ansible</li>
+                <li>JavaScript</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="project-item">
+            <summary class="project-item__summary">
               <span class="project-item__logo">GL</span>
 
               <span class="project-item__heading">
@@ -298,8 +500,11 @@
             </summary>
 
             <div class="project-item__content">
-              <p class="project-item__repo-row"><a class="project-item__repo" href="https://github.com/MileFisher/Guardrail_LMS" target="_blank" rel="noreferrer">Open repository</a></p>
-              <p>A process-based academic integrity platform with telemetry monitoring, signed events, anomaly detection, and an AI-guided tutor for non-assessed study sessions.</p>
+              <p class="project-item__repo-row"><a class="project-item__repo"
+                  href="https://github.com/MileFisher/Guardrail_LMS" target="_blank" rel="noreferrer">Open
+                  repository</a></p>
+              <p>A process-based academic integrity platform with telemetry monitoring, signed events, anomaly
+                detection, and an AI-guided tutor for non-assessed study sessions.</p>
               <ul class="tag-list">
                 <li>React</li>
                 <li>Node.js</li>
@@ -324,8 +529,11 @@
             </summary>
 
             <div class="project-item__content">
-              <p class="project-item__repo-row"><a class="project-item__repo" href="https://github.com/qchau0202/ai-clinical-navigator" target="_blank" rel="noreferrer">Open repository</a></p>
-              <p>A team project for AI-assisted healthcare where the frontend is complete, the model is trained, and the remaining milestone is full model integration.</p>
+              <p class="project-item__repo-row"><a class="project-item__repo"
+                  href="https://github.com/qchau0202/ai-clinical-navigator" target="_blank" rel="noreferrer">Open
+                  repository</a></p>
+              <p>A team project for AI-assisted healthcare where the frontend is complete, the model is trained, and the
+                remaining milestone is full model integration.</p>
               <ul class="tag-list">
                 <li>React</li>
                 <li>Frontend</li>
@@ -348,38 +556,17 @@
             </summary>
 
             <div class="project-item__content">
-              <p class="project-item__repo-row"><a class="project-item__repo" href="https://github.com/SawBawMuThaw/advanced-db-final" target="_blank" rel="noreferrer">Open repository</a></p>
-              <p>A fundraising platform built as a multi-service system with FastAPI, SQL Server, MongoDB, Stripe, an API gateway, and saga orchestration.</p>
+              <p class="project-item__repo-row"><a class="project-item__repo"
+                  href="https://github.com/SawBawMuThaw/advanced-db-final" target="_blank" rel="noreferrer">Open
+                  repository</a></p>
+              <p>A fundraising platform built as a multi-service system with FastAPI, SQL Server, MongoDB, Stripe, an
+                API gateway, and saga orchestration.</p>
               <ul class="tag-list">
                 <li>Python</li>
                 <li>FastAPI</li>
                 <li>SQL Server</li>
                 <li>MongoDB</li>
                 <li>Stripe</li>
-              </ul>
-            </div>
-          </details>
-
-          <details class="project-item">
-            <summary class="project-item__summary">
-              <span class="project-item__logo">DO</span>
-
-              <span class="project-item__heading">
-                <span class="project-item__title">DevOps Final Project</span>
-                <span class="project-item__meta">Ops Focus</span>
-              </span>
-
-              <span class="project-item__caret" aria-hidden="true">⌄</span>
-            </summary>
-
-            <div class="project-item__content">
-              <p class="project-item__repo-row"><a class="project-item__repo" href="https://github.com/MileFisher/DevOps_final" target="_blank" rel="noreferrer">Open repository</a></p>
-              <p>Coursework centered on collaborative delivery, CI/CD workflows, infrastructure automation, and the operational side of software engineering.</p>
-              <ul class="tag-list">
-                <li>GitHub Actions</li>
-                <li>Terraform</li>
-                <li>Ansible</li>
-                <li>JavaScript</li>
               </ul>
             </div>
           </details>
@@ -400,12 +587,14 @@
               <li>
                 <strong>Ton Duc Thang University</strong>
                 <span>2023 - Current</span>
-                <p>Third-year Software Engineering student with a 75% scholarship.</p>
+                <p>Third-year Software Engineering student with a 75% tuition scholarship and Encouragement
+                  Scholarships for academic achievement across all four semesters of the 2023/24 and 2024/25 academic
+                  years.</p>
               </li>
               <li>
                 <strong>University of Dental Medicine (Mandalay)</strong>
                 <span>2016 - 2020</span>
-                <p>An earlier academic path that was interrupted during COVID-19 before I moved into software engineering.</p>
+                <p>An earlier academic path that was interrupted because of COVID-19 and other issues.</p>
               </li>
             </ul>
           </div>
@@ -414,20 +603,17 @@
             <h3>Highlights</h3>
             <ul class="info-list">
               <li>
-                <strong>75% Scholarship</strong>
-                <span>Academic support</span>
-                <p>Maintaining strong performance while building practical systems through coursework and side projects.</p>
+                <strong>Academic Achievement Scholarships</strong>
+                <span>Four semesters / 2023/24 - 2024/25</span>
+                <p>Received Encouragement Scholarships across all four semesters while balancing coursework,
+                  leadership, and hands-on project work.</p>
               </li>
               <li>
                 <strong>IELTS 6.0 and JLPT N5</strong>
                 <span>Language milestones</span>
                 <p>Comfortable working across multilingual academic and collaborative environments.</p>
               </li>
-              <li>
-                <strong>AI Research Interest</strong>
-                <span>Current direction</span>
-                <p>Exploring artificial intelligence systems for knee joint analysis and diagnosis.</p>
-              </li>
+
             </ul>
           </div>
         </div>
@@ -445,17 +631,20 @@
             <h3>Team Repositories</h3>
             <ul class="info-list">
               <li>
-                <strong><a href="https://github.com/MannDHHarry/Mobile_App_Wallet_Final" target="_blank" rel="noreferrer">Mobile App Wallet Final</a></strong>
+                <strong><a href="https://github.com/MannDHHarry/Mobile_App_Wallet_Final" target="_blank"
+                    rel="noreferrer">Mobile App Wallet Final</a></strong>
                 <span>Android / Java</span>
                 <p>Wallet application built with Java and Gradle.</p>
               </li>
               <li>
-                <strong><a href="https://github.com/Saw-Baw-Mu-Thaw/soa-final" target="_blank" rel="noreferrer">SOA Final</a></strong>
+                <strong><a href="https://github.com/Saw-Baw-Mu-Thaw/soa-final" target="_blank" rel="noreferrer">SOA
+                    Final</a></strong>
                 <span>Microservices</span>
                 <p>Learning Management System built around service-oriented architecture.</p>
               </li>
               <li>
-                <strong><a href="https://github.com/Saw-Baw-Mu-Thaw/PE2TicketingSystem" target="_blank" rel="noreferrer">PE2 Ticketing System</a></strong>
+                <strong><a href="https://github.com/Saw-Baw-Mu-Thaw/PE2TicketingSystem" target="_blank"
+                    rel="noreferrer">PE2 Ticketing System</a></strong>
                 <span>C# / Desktop</span>
                 <p>Visual Studio team project for a ticketing workflow.</p>
               </li>
@@ -473,7 +662,8 @@
               <li>
                 <strong>Backend and data support</strong>
                 <span>System contribution</span>
-                <p>Working across APIs, services, relational databases, and document stores as systems become more complex.</p>
+                <p>Working across APIs, services, relational databases, and document stores as systems become more
+                  complex.</p>
               </li>
               <li>
                 <strong>Delivery mindset</strong>
@@ -487,9 +677,10 @@
     </main>
 
     <footer class="site-footer screen-line-top screen-line-bottom">
-      <p>Built from my CV, portfolio notes, and project history.</p>
+      <p>TEAMWORK MAKES THE DREAM WORK</p>
       <p><span id="current-year"></span> Aung Khant Paing</p>
     </footer>
   </div>
 </body>
+
 </html>

@@ -2,7 +2,7 @@
 
 ## Short Bio
 
-Aung Khant Paing is a Software Engineering student at TDTU who enjoys building practical systems across full-stack development, AI applications, databases, and deployment workflows. His work spans React and Node.js web apps, Python-based backend and AI projects, Android development, and DevOps-focused coursework using Docker, Terraform, Ansible, and CI/CD pipelines.
+Aung Khant Paing is a Software Engineering student at TDTU who enjoys building practical systems across full-stack development, AI applications, databases, ERP workflows, and deployment. His work spans React and Node.js web apps, Python-based backend and AI projects, Android development, Odoo familiarity, and DevOps-focused coursework using Docker, Terraform, Ansible, and CI/CD pipelines.
 
 ## Portfolio Copy
 
@@ -12,11 +12,18 @@ Hi, I'm **Aung Khant Paing**, a **Software Engineering student at TDTU** with a 
 
 ### About Me
 
-I am a software engineering student focused on building reliable applications from frontend to deployment. My projects show a mix of web development, applied AI, database systems, and infrastructure work, with hands-on experience in JavaScript, Python, Java, React, Node.js, FastAPI, PostgreSQL, Docker, and GitHub-based workflows.
+I am a software engineering student focused on building reliable applications from frontend to deployment. My projects show a mix of web development, applied AI, database systems, ERP workflows, and infrastructure work, with hands-on experience in JavaScript, Python, Java, React, Node.js, FastAPI, PostgreSQL, Docker, GitHub-based workflows, and Odoo.
 
-I am especially interested in projects that solve real problems, whether that means improving academic integrity through system design, building service-oriented platforms, supporting AI-assisted healthcare tools, or automating delivery workflows with DevOps tools. I value practical implementation, continuous learning, and collaborating through well-structured code.
+I am especially interested in projects that solve real problems, whether that means improving academic integrity through system design, building service-oriented platforms, supporting AI-assisted healthcare tools, or automating delivery workflows with DevOps tools. I value practical implementation, continuous learning, and collaborating through well-structured code. I have also received Encouragement Scholarships for academic achievement across all four semesters of the 2023/24 and 2024/25 academic years.
 
 ### Featured Projects
+
+#### DevOps Final Project
+**Tech:** JavaScript, GitHub Actions, Terraform, Ansible
+
+This project was developed as part of my Software Deployment and Operation coursework. It highlights collaborative development, CI/CD workflows, and infrastructure automation using Terraform and Ansible. It represents my growing experience with deployment pipelines and the operational side of software engineering.
+
+GitHub: https://github.com/MileFisher/DevOps_final
 
 #### Guardrail LMS
 **Tech:** React, Vite, Node.js, Express, PostgreSQL, Render, Cloudflare Pages, OpenRouter
@@ -31,13 +38,6 @@ GitHub: https://github.com/MileFisher/Guardrail_LMS
 AI Clinical Navigator is an unfinished team project that I contributed to as a collaborator. The frontend is currently completed, and the machine learning model training has also been finished, but the model has not yet been fully integrated into the application. I include this project because it reflects both my contribution to the user-facing experience and my involvement in a larger AI healthcare workflow that is still in progress.
 
 GitHub: https://github.com/qchau0202/ai-clinical-navigator
-
-#### DevOps Final Project
-**Tech:** JavaScript, GitHub Actions, Terraform, Ansible
-
-This project was developed as part of my Software Deployment and Operation coursework. It highlights collaborative development, CI/CD workflows, and infrastructure automation using Terraform and Ansible. It represents my growing experience with deployment pipelines and the operational side of software engineering.
-
-GitHub: https://github.com/MileFisher/DevOps_final
 
 #### Advanced DB Final
 **Tech:** Python, FastAPI, SQL Server, MongoDB, Stripe, multi-service architecture
@@ -63,7 +63,7 @@ These team and coursework projects reflect my willingness to work across differe
 
 **Frontend:** React, Vite, HTML, CSS
 
-**Backend:** Node.js, Express, FastAPI, microservices
+**Backend:** Node.js, Express, FastAPI, microservices, Odoo ERP familiarity
 
 **AI and Data:** PyTorch, computer vision, explainable AI, AI integration workflows
 
@@ -79,8 +79,8 @@ I am building my experience through academic and personal projects that connect 
 
 Hi, I'm **Aung Khant Paing**, a Software Engineering student at TDTU. I enjoy building full-stack applications, experimenting with AI-powered systems, and learning how software moves from development into real deployment.
 
-My GitHub reflects the areas I care about most: practical web development, applied AI, database systems, and DevOps workflows. I have worked with JavaScript, Python, Java, React, Node.js, FastAPI, PostgreSQL, SQL Server, MongoDB, Docker, Terraform, and GitHub Actions through projects ranging from academic systems to AI-assisted healthcare tools.
+My GitHub reflects the areas I care about most: practical web development, applied AI, database systems, ERP workflows, and DevOps workflows. I have worked with JavaScript, Python, Java, React, Node.js, FastAPI, PostgreSQL, SQL Server, MongoDB, Docker, Terraform, GitHub Actions, and Odoo familiarity through projects ranging from academic systems to AI-assisted healthcare tools.
 
-Some of my strongest work includes **Guardrail LMS**, a full-stack academic integrity platform with telemetry monitoring and AI-guided tutoring, **AI Clinical Navigator**, an unfinished team project where the frontend is complete and model integration is still pending, **Advanced DB Final**, a multi-service fundraising platform using both SQL and NoSQL systems, and a **DevOps final project** focused on CI/CD and infrastructure automation.
+Some of my strongest work includes a **DevOps final project** focused on CI/CD and infrastructure automation, **Guardrail LMS**, a full-stack academic integrity platform with telemetry monitoring and AI-guided tutoring, **AI Clinical Navigator**, an unfinished team project where the frontend is complete and model integration is still pending, and **Advanced DB Final**, a multi-service fundraising platform using both SQL and NoSQL systems.
 
-I enjoy solving real problems through code, learning new tools by building with them, and contributing to collaborative projects that improve both the technical and operational sides of software systems.
+I enjoy solving real problems through code, learning new tools by building with them, and contributing to collaborative projects that improve both the technical and operational sides of software systems. I have also maintained strong academic standing through Encouragement Scholarships awarded across all four semesters of the 2023/24 and 2024/25 academic years.
