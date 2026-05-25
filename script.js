@@ -1,10 +1,12 @@
 const revealNodes = document.querySelectorAll(".reveal");
-const navLinks = document.querySelectorAll(".site-nav a");
+const navLinks = document.querySelectorAll(".section-nav a");
 const sections = [...navLinks]
   .map((link) => document.querySelector(link.getAttribute("href")))
   .filter(Boolean);
-const scrollBar = document.querySelector(".scroll-indicator__bar");
 const currentYear = document.querySelector("#current-year");
+const themeToggle = document.querySelector("#theme-toggle");
+const localTimeNode = document.querySelector("#local-time");
+const themeMedia = window.matchMedia("(prefers-color-scheme: dark)");
 
 for (const node of revealNodes) {
   const delay = Number(node.dataset.delay || 0);
@@ -23,7 +25,7 @@ const revealObserver = new IntersectionObserver(
     }
   },
   {
-    threshold: 0.18,
+    threshold: 0.14,
     rootMargin: "0px 0px -40px 0px",
   }
 );
@@ -40,15 +42,15 @@ const sectionObserver = new IntersectionObserver(
       }
 
       const activeId = `#${entry.target.id}`;
+
       for (const link of navLinks) {
-        const isActive = link.getAttribute("href") === activeId;
-        link.classList.toggle("is-active", isActive);
+        link.classList.toggle("is-active", link.getAttribute("href") === activeId);
       }
     }
   },
   {
-    threshold: 0.45,
-    rootMargin: "-10% 0px -35% 0px",
+    threshold: 0.35,
+    rootMargin: "-10% 0px -50% 0px",
   }
 );
 
@@ -56,15 +58,59 @@ for (const section of sections) {
   sectionObserver.observe(section);
 }
 
-function updateScrollBar() {
-  const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-  const progress = scrollable > 0 ? window.scrollY / scrollable : 0;
-  scrollBar.style.width = `${Math.min(progress, 1) * 100}%`;
+function applyTheme(theme) {
+  document.body.dataset.theme = theme;
+  localStorage.setItem("portfolio-theme", theme);
+
+  if (!themeToggle) {
+    return;
+  }
+
+  const isDark = theme === "dark";
+  themeToggle.textContent = isDark ? "Light Mode" : "Dark Mode";
+  themeToggle.setAttribute("aria-pressed", String(isDark));
+  themeToggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
 }
 
-window.addEventListener("scroll", updateScrollBar, { passive: true });
-window.addEventListener("resize", updateScrollBar);
-updateScrollBar();
+function syncThemeFromPreference() {
+  const storedTheme = localStorage.getItem("portfolio-theme");
+
+  if (storedTheme === "light" || storedTheme === "dark") {
+    applyTheme(storedTheme);
+    return;
+  }
+
+  applyTheme(themeMedia.matches ? "dark" : "light");
+}
+
+function updateLocalTime() {
+  if (!localTimeNode) {
+    return;
+  }
+
+  localTimeNode.textContent = new Intl.DateTimeFormat("en-GB", {
+    hour: "2-digit",
+    minute: "2-digit",
+    timeZone: "Asia/Ho_Chi_Minh",
+  }).format(new Date());
+}
+
+syncThemeFromPreference();
+updateLocalTime();
+setInterval(updateLocalTime, 60000);
+
+themeMedia.addEventListener("change", () => {
+  if (!localStorage.getItem("portfolio-theme")) {
+    applyTheme(themeMedia.matches ? "dark" : "light");
+  }
+});
+
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    const nextTheme = document.body.dataset.theme === "dark" ? "light" : "dark";
+    applyTheme(nextTheme);
+  });
+}
 
 if (currentYear) {
   currentYear.textContent = new Date().getFullYear();
