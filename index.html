@@ -126,6 +126,12 @@
       <div class="topbar__actions">
         <a class="topbar__link" href="#projects">Projects</a>
         <a class="topbar__link" href="assets/AungKhantPaing-CV.pdf" target="_blank" rel="noreferrer">CV</a>
+        <a class="topbar__icon-link" href="https://github.com/MileFisher" target="_blank" rel="noreferrer"
+          aria-label="GitHub">
+          <svg aria-hidden="true">
+            <use href="#icon-github"></use>
+          </svg>
+        </a>
         <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false"
           aria-label="Switch to dark theme">
           <svg class="theme-toggle__icon" aria-hidden="true">
@@ -324,48 +330,83 @@
           <p class="stack-intro">Tools and platforms I am most comfortable using across application development, ERP
             workflows, and deployment.</p>
           <ul class="stack-cloud" aria-label="Tech stack">
-            <li class="stack-pill"><span class="stack-pill__icon"
-                style="--stack-accent: #f7df1e; --stack-ink: #111111;">JS</span><span
-                class="stack-pill__label">JavaScript</span></li>
-            <li class="stack-pill"><span class="stack-pill__icon" style="--stack-accent: #3776ab;">PY</span><span
-                class="stack-pill__label">Python</span></li>
-            <li class="stack-pill"><span class="stack-pill__icon" style="--stack-accent: #f89820;">JV</span><span
-                class="stack-pill__label">Java</span></li>
-            <li class="stack-pill"><span class="stack-pill__icon" style="--stack-accent: #512bd4;">C#</span><span
-                class="stack-pill__label">C#</span></li>
-            <li class="stack-pill"><span class="stack-pill__icon"
-                style="--stack-accent: #61dafb; --stack-ink: #111111;">RE</span><span
-                class="stack-pill__label">React</span></li>
-            <li class="stack-pill"><span class="stack-pill__icon" style="--stack-accent: #5fa04e;">ND</span><span
-                class="stack-pill__label">Node.js</span></li>
-            <li class="stack-pill"><span class="stack-pill__icon" style="--stack-accent: #262626;">EX</span><span
-                class="stack-pill__label">Express</span></li>
-            <li class="stack-pill"><span class="stack-pill__icon" style="--stack-accent: #009688;">FA</span><span
-                class="stack-pill__label">FastAPI</span></li>
-            <li class="stack-pill"><span class="stack-pill__icon" style="--stack-accent: #336791;">PG</span><span
-                class="stack-pill__label">PostgreSQL</span></li>
-            <li class="stack-pill"><span class="stack-pill__icon" style="--stack-accent: #cc2927;">SS</span><span
-                class="stack-pill__label">SQL Server</span></li>
-            <li class="stack-pill"><span class="stack-pill__icon" style="--stack-accent: #13aa52;">MG</span><span
-                class="stack-pill__label">MongoDB</span></li>
-            <li class="stack-pill"><span class="stack-pill__icon" style="--stack-accent: #2496ed;">DK</span><span
-                class="stack-pill__label">Docker</span></li>
-            <li class="stack-pill"><span class="stack-pill__icon" style="--stack-accent: #2088ff;">GA</span><span
-                class="stack-pill__label">GitHub Actions</span></li>
-            <li class="stack-pill"><span class="stack-pill__icon" style="--stack-accent: #7b42bc;">TF</span><span
-                class="stack-pill__label">Terraform</span></li>
-            <li class="stack-pill"><span class="stack-pill__icon" style="--stack-accent: #ee0000;">AN</span><span
-                class="stack-pill__label">Ansible</span></li>
-            <li class="stack-pill"><span class="stack-pill__icon" style="--stack-accent: #7c378f;">OD</span><span
-                class="stack-pill__label">Odoo ERP</span></li>
-            <li class="stack-pill"><span class="stack-pill__icon" style="--stack-accent: #f05032;">GT</span><span
-                class="stack-pill__label">Git</span></li>
-            <li class="stack-pill"><span class="stack-pill__icon" style="--stack-accent: #ee4c2c;">PT</span><span
-                class="stack-pill__label">PyTorch</span></li>
-            <li class="stack-pill"><span class="stack-pill__icon" style="--stack-accent: #0f766e;">CV</span><span
-                class="stack-pill__label">Computer Vision</span></li>
-            <li class="stack-pill"><span class="stack-pill__icon" style="--stack-accent: #475569;">MS</span><span
-                class="stack-pill__label">Microservices</span></li>
+            <li class="stack-pill"><a class="stack-pill__link" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+                target="_blank" rel="noreferrer"><span class="stack-pill__icon"
+                  style="--icon: url('assets/tech-icons/javascript.svg'); --stack-accent: #f7df1e; --stack-accent-dark: #f7df1e;"></span><span
+                  class="stack-pill__label">JavaScript</span></a></li>
+            <li class="stack-pill"><a class="stack-pill__link" href="https://www.python.org/" target="_blank"
+                rel="noreferrer"><span class="stack-pill__icon"
+                  style="--icon: url('assets/tech-icons/python.svg'); --stack-accent: #3776ab; --stack-accent-dark: #6ea8dc;"></span><span
+                  class="stack-pill__label">Python</span></a></li>
+            <li class="stack-pill"><a class="stack-pill__link" href="https://www.java.com/" target="_blank"
+                rel="noreferrer"><span class="stack-pill__icon"
+                  style="--icon: url('assets/tech-icons/java.svg'); --stack-accent: #f89820; --stack-accent-dark: #f89820;"></span><span
+                  class="stack-pill__label">Java</span></a></li>
+            <li class="stack-pill"><a class="stack-pill__link" href="https://learn.microsoft.com/en-us/dotnet/csharp/"
+                target="_blank" rel="noreferrer"><span class="stack-pill__icon"
+                  style="--icon: url('assets/tech-icons/csharp.svg'); --stack-accent: #512bd4; --stack-accent-dark: #a78bfa;"></span><span
+                  class="stack-pill__label">C#</span></a></li>
+            <li class="stack-pill"><a class="stack-pill__link" href="https://react.dev/" target="_blank"
+                rel="noreferrer"><span class="stack-pill__icon"
+                  style="--icon: url('assets/tech-icons/react.svg'); --stack-accent: #61dafb; --stack-accent-dark: #61dafb;"></span><span
+                  class="stack-pill__label">React</span></a></li>
+            <li class="stack-pill"><a class="stack-pill__link" href="https://nodejs.org/" target="_blank"
+                rel="noreferrer"><span class="stack-pill__icon"
+                  style="--icon: url('assets/tech-icons/nodejs.svg'); --stack-accent: #5fa04e; --stack-accent-dark: #7cc46a;"></span><span
+                  class="stack-pill__label">Node.js</span></a></li>
+            <li class="stack-pill"><a class="stack-pill__link" href="https://expressjs.com/" target="_blank"
+                rel="noreferrer"><span class="stack-pill__icon"
+                  style="--icon: url('assets/tech-icons/express.svg'); --stack-accent: #262626; --stack-accent-dark: #d4d4d4;"></span><span
+                  class="stack-pill__label">Express</span></a></li>
+            <li class="stack-pill"><a class="stack-pill__link" href="https://fastapi.tiangolo.com/" target="_blank"
+                rel="noreferrer"><span class="stack-pill__icon"
+                  style="--icon: url('assets/tech-icons/fastapi.svg'); --stack-accent: #009688; --stack-accent-dark: #2ec4b6;"></span><span
+                  class="stack-pill__label">FastAPI</span></a></li>
+            <li class="stack-pill"><a class="stack-pill__link" href="https://www.postgresql.org/docs/" target="_blank"
+                rel="noreferrer"><span class="stack-pill__icon"
+                  style="--icon: url('assets/tech-icons/postgresql.svg'); --stack-accent: #336791; --stack-accent-dark: #6b9fce;"></span><span
+                  class="stack-pill__label">PostgreSQL</span></a></li>
+            <li class="stack-pill"><a class="stack-pill__link"
+                href="https://learn.microsoft.com/en-us/sql/sql-server/" target="_blank" rel="noreferrer"><span
+                  class="stack-pill__icon"
+                  style="--icon: url('assets/tech-icons/sqlserver.svg'); --stack-accent: #cc2927; --stack-accent-dark: #e86563;"></span><span
+                  class="stack-pill__label">SQL Server</span></a></li>
+            <li class="stack-pill"><a class="stack-pill__link" href="https://www.mongodb.com/docs/" target="_blank"
+                rel="noreferrer"><span class="stack-pill__icon"
+                  style="--icon: url('assets/tech-icons/mongodb.svg'); --stack-accent: #13aa52; --stack-accent-dark: #2bc96e;"></span><span
+                  class="stack-pill__label">MongoDB</span></a></li>
+            <li class="stack-pill"><a class="stack-pill__link" href="https://docs.docker.com/" target="_blank"
+                rel="noreferrer"><span class="stack-pill__icon"
+                  style="--icon: url('assets/tech-icons/docker.svg'); --stack-accent: #2496ed; --stack-accent-dark: #4aa9f0;"></span><span
+                  class="stack-pill__label">Docker</span></a></li>
+            <li class="stack-pill"><a class="stack-pill__link" href="https://docs.github.com/en/actions"
+                target="_blank" rel="noreferrer"><span class="stack-pill__icon"
+                  style="--icon: url('assets/tech-icons/githubactions.svg'); --stack-accent: #2088ff; --stack-accent-dark: #4d9dff;"></span><span
+                  class="stack-pill__label">GitHub Actions</span></a></li>
+            <li class="stack-pill"><a class="stack-pill__link" href="https://developer.hashicorp.com/terraform/docs"
+                target="_blank" rel="noreferrer"><span class="stack-pill__icon"
+                  style="--icon: url('assets/tech-icons/terraform.svg'); --stack-accent: #7b42bc; --stack-accent-dark: #a06fe0;"></span><span
+                  class="stack-pill__label">Terraform</span></a></li>
+            <li class="stack-pill"><a class="stack-pill__link" href="https://docs.ansible.com/" target="_blank"
+                rel="noreferrer"><span class="stack-pill__icon"
+                  style="--icon: url('assets/tech-icons/ansible.svg'); --stack-accent: #ee0000; --stack-accent-dark: #ff5555;"></span><span
+                  class="stack-pill__label">Ansible</span></a></li>
+            <li class="stack-pill"><a class="stack-pill__link" href="https://www.odoo.com/documentation/" target="_blank"
+                rel="noreferrer"><span class="stack-pill__icon"
+                  style="--icon: url('assets/tech-icons/odoo.svg'); --stack-accent: #714b67; --stack-accent-dark: #b08aa3;"></span><span
+                  class="stack-pill__label">Odoo ERP</span></a></li>
+            <li class="stack-pill"><a class="stack-pill__link" href="https://git-scm.com/doc" target="_blank"
+                rel="noreferrer"><span class="stack-pill__icon"
+                  style="--icon: url('assets/tech-icons/git.svg'); --stack-accent: #f05032; --stack-accent-dark: #f4795f;"></span><span
+                  class="stack-pill__label">Git</span></a></li>
+            <li class="stack-pill"><a class="stack-pill__link" href="https://pytorch.org/docs/stable/index.html"
+                target="_blank" rel="noreferrer"><span class="stack-pill__icon"
+                  style="--icon: url('assets/tech-icons/pytorch.svg'); --stack-accent: #ee4c2c; --stack-accent-dark: #f47459;"></span><span
+                  class="stack-pill__label">PyTorch</span></a></li>
+            <li class="stack-pill"><span class="stack-pill__plain"><span class="stack-pill__dot"
+                  aria-hidden="true"></span><span class="stack-pill__label">Computer Vision</span></span></li>
+            <li class="stack-pill"><span class="stack-pill__plain"><span class="stack-pill__dot"
+                  aria-hidden="true"></span><span class="stack-pill__label">Microservices</span></span></li>
           </ul>
         </div>
       </section>
