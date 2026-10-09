@@ -101,6 +101,13 @@
         d="M21.418 1H2.584C1.634 1 1 1.628 1 2.572v18.855C1 22.373 1.792 23 2.583 23h18.834c.95 0 1.583-.628 1.583-1.572V2.573C23.001 1.627 22.367 1 21.418 1ZM7.49 19.7H4.166V9.172h3.323L7.49 19.7ZM5.906 7.757c-1.108 0-1.898-.785-1.898-1.885S4.8 3.985 5.906 3.985c1.11 0 1.9.787 1.9 1.887s-.95 1.885-1.9 1.885ZM19.836 19.7h-3.324v-5.028c0-1.257 0-2.83-1.742-2.83-1.74 0-1.9 1.258-1.9 2.673V19.7H9.548V9.172h3.166v1.413c.633-1.1 1.9-1.728 3.165-1.728 3.325 0 3.957 2.2 3.957 5.028V19.7Z"
         fill="currentColor"></path>
     </symbol>
+    <symbol id="icon-volume" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M11 5.5 6.75 9H4.5a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h2.25L11 18.5Z"></path>
+        <path class="name-audio__wave name-audio__wave--1" d="M15 9.5a3.5 3.5 0 0 1 0 5"></path>
+        <path class="name-audio__wave name-audio__wave--2" d="M17.75 7a7 7 0 0 1 0 10"></path>
+      </g>
+    </symbol>
     <symbol id="icon-moon" viewBox="0 0 24 24">
       <path d="M20.75 14.09A8.53 8.53 0 0 1 9.91 3.25a.75.75 0 0 0-.9-.96A9.5 9.5 0 1 0 21.71 15a.75.75 0 0 0-.96-.91Z"
         fill="currentColor"></path>
@@ -152,9 +159,7 @@
 
       <section class="profile-header screen-line-bottom">
         <div class="profile-header__avatar">
-          <div class="avatar-badge" aria-hidden="true">
-            <span>AKP</span>
-          </div>
+          <img class="avatar-photo" src="assets/photos/profile-avatar.webp" alt="" width="320" height="320">
         </div>
 
         <div class="profile-header__content">
@@ -164,6 +169,14 @@
 
           <div class="profile-header__title-row">
             <h1>Aung Khant Paing</h1>
+            <button class="name-audio" id="name-audio-button" type="button"
+              aria-label="Hear how to pronounce Aung Khant Paing" title="Hear pronunciation">
+              <svg aria-hidden="true">
+                <use href="#icon-volume"></use>
+              </svg>
+            </button>
+            <audio id="name-audio" src="assets/audio/name-pronunciation.wav" preload="auto"></audio>
+            <span class="profile-header__native-name" lang="my">အောင်ခန့်ပိုင်</span>
             <span class="status-dot" aria-label="Available for new opportunities"></span>
           </div>
 
@@ -198,7 +211,7 @@
               <span class="intro-icon"><svg aria-hidden="true">
                   <use href="#icon-briefcase"></use>
                 </svg></span>
-              <p>Former Network Engineering Intern @ <a href="#experience-fpt">FPT IS</a></p>
+              <p>Former Software &amp; AI Engineering Intern @ <a href="#experience-techvalley">TechValley Vietnam</a></p>
             </div>
           </div>
 
@@ -315,8 +328,8 @@
           <ul class="about-list">
             <li>Software Engineering student focused on full-stack web development, applied AI, database systems, and
               deployment workflows.</li>
-            <li>Hands-on with JavaScript, Python, Java, C#, React, Node.js, FastAPI, SQL systems, Docker, GitHub
-              Actions, Terraform, Ansible, and Odoo ERP workflows.</li>
+            <li>Hands-on with JavaScript, Python, Java, C#, React, Node.js, FastAPI, SQL systems, Docker, Kubernetes,
+              GitHub Actions, Terraform, Ansible, and Odoo ERP workflows.</li>
             <li>Interested in systems that solve real problems, especially academic integrity tooling, AI-assisted
               ideas, service-oriented platforms, and enterprise workflows.</li>
           </ul>
@@ -379,6 +392,10 @@
                 rel="noreferrer"><span class="stack-pill__icon"
                   style="--icon: url('assets/tech-icons/docker.svg'); --stack-accent: #2496ed; --stack-accent-dark: #4aa9f0;"></span><span
                   class="stack-pill__label">Docker</span></a></li>
+            <li class="stack-pill"><a class="stack-pill__link" href="https://kubernetes.io/docs/" target="_blank"
+                rel="noreferrer"><span class="stack-pill__icon"
+                  style="--icon: url('assets/tech-icons/kubernetes.svg'); --stack-accent: #326ce5; --stack-accent-dark: #6b95f0;"></span><span
+                  class="stack-pill__label">Kubernetes</span></a></li>
             <li class="stack-pill"><a class="stack-pill__link" href="https://docs.github.com/en/actions"
                 target="_blank" rel="noreferrer"><span class="stack-pill__icon"
                   style="--icon: url('assets/tech-icons/githubactions.svg'); --stack-accent: #2088ff; --stack-accent-dark: #4d9dff;"></span><span
@@ -413,12 +430,94 @@
 
       <div class="separator" aria-hidden="true"></div>
 
+      <section class="panel" id="achievements">
+        <header class="panel__header">
+          <h2 class="panel__title">Achievements</h2>
+        </header>
+
+        <div class="panel__body panel__body--flush">
+          <article class="experience-card achievement-card" id="achievement-kneexpert">
+            <div class="experience-card__head">
+              <span class="experience-card__mark">KX</span>
+              <div>
+                <h3>KneeXpert</h3>
+                <p>AI system for knee joint analysis and diagnosis using dual-modality X-ray and MRI</p>
+              </div>
+            </div>
+
+            <div class="experience-card__timeline">
+              <div class="position-item">
+                <div class="position-item__marker"></div>
+                <div>
+                  <div class="position-item__title">4th Prize (Innovative Potential Prize), VietFuture Awards 2026</div>
+                  <p>Recognised at the VietFuture Awards 2026 ceremony in Ho Chi Minh City on 18 Sep 2026 with the
+                    KneeXpert team project.</p>
+                </div>
+              </div>
+
+              <div class="position-item">
+                <div class="position-item__marker"></div>
+                <div>
+                  <div class="position-item__title">2nd Prize, TDTU university round / Eureka representative</div>
+                  <p>Won second prize in the university-level competition and was selected as one of Ton Duc Thang
+                    University's representative teams for the Eureka Student Scientific Research Award.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="achievement-card__footer">
+              <div class="achievement-gallery" aria-label="KneeXpert achievement photos">
+                <a class="achievement-gallery__item" href="assets/photos/vietfuture-2026-award.webp"
+                  data-caption="VietFuture Awards 2026 / Innovative Potential Prize / Ho Chi Minh City, 18 Sep 2026">
+                  <img src="assets/photos/vietfuture-2026-award-thumb.webp"
+                    alt="KneeXpert team members on stage at the VietFuture Awards 2026 ceremony, holding the Innovative Potential Prize certificate and prize board"
+                    width="480" height="640" loading="lazy" decoding="async">
+                </a>
+              </div>
+
+              <p class="project-item__repo-row"><a class="project-item__repo"
+                  href="https://knee-xpert-showcase.vercel.app/" target="_blank" rel="noreferrer">View project
+                  showcase ↗</a></p>
+              <ul class="tag-list">
+                <li>Medical AI</li>
+                <li>Computer Vision</li>
+                <li>X-ray</li>
+                <li>MRI</li>
+                <li>Team Project</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <div class="separator" aria-hidden="true"></div>
+
       <section class="panel" id="experience">
         <header class="panel__header">
           <h2 class="panel__title">Experience</h2>
         </header>
 
         <div class="panel__body panel__body--flush">
+          <article class="experience-card" id="experience-techvalley">
+            <div class="experience-card__head">
+              <span class="experience-card__mark">TV</span>
+              <div>
+                <h3>TechValley Vietnam</h3>
+                <p>Software &amp; AI Engineering Intern</p>
+              </div>
+            </div>
+
+            <div class="experience-card__timeline">
+              <div class="position-item">
+                <div class="position-item__marker"></div>
+                <div>
+                  <div class="position-item__title">Internship, Jul 2026 - Sep 2026</div>
+                  <p>Worked across software engineering and applied AI tasks as part of the engineering team.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
           <article class="experience-card" id="experience-fpt">
             <div class="experience-card__head">
               <span class="experience-card__mark">FI</span>
@@ -461,8 +560,8 @@
               <div class="position-item">
                 <div class="position-item__marker"></div>
                 <div>
-                  <div class="position-item__title">Teaching Assistant, previous role</div>
-                  <p>Supported classroom and center activities before moving into the design and media team.</p>
+                  <div class="position-item__title">Teaching Assistant, until 2025</div>
+                  <p>Supported classroom and center activities alongside the media and design work.</p>
                 </div>
               </div>
             </div>
@@ -714,6 +813,16 @@
         </div>
       </section>
     </main>
+
+    <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+      <figure class="lightbox__figure">
+        <img class="lightbox__image" id="lightbox-image" src="" alt="">
+        <figcaption class="lightbox__caption" id="lightbox-caption"></figcaption>
+      </figure>
+      <form method="dialog">
+        <button class="lightbox__close" type="submit" aria-label="Close photo">×</button>
+      </form>
+    </dialog>
 
     <footer class="site-footer screen-line-top screen-line-bottom">
       <p>TEAMWORK MAKES THE DREAM WORK</p>

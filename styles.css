@@ -383,17 +383,14 @@ ul {
   border-right: 1px solid var(--line);
 }
 
-.avatar-badge {
-  display: grid;
-  place-items: center;
-  width: 3.4rem;
-  height: 3.4rem;
+.avatar-photo {
+  display: block;
+  width: 4.25rem;
+  height: 4.25rem;
   border: 1px solid var(--border);
-  background: linear-gradient(180deg, color-mix(in srgb, var(--background) 92%, transparent), color-mix(in srgb, var(--accent) 85%, transparent));
-  font-family: var(--font-mono);
-  font-size: 0.9rem;
-  letter-spacing: 0.16em;
-  text-indent: 0.16em;
+  border-radius: 50%;
+  background: var(--accent);
+  object-fit: cover;
 }
 
 .profile-header__content {
@@ -414,6 +411,7 @@ ul {
 
 .profile-header__title-row {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 0.6rem;
   padding: 0.65rem 1rem 0;
@@ -425,6 +423,58 @@ ul {
   font-weight: 600;
   letter-spacing: -0.025em;
   line-height: 1.1;
+}
+
+.name-audio {
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 1.9rem;
+  height: 1.9rem;
+  border: 1px solid var(--border);
+  padding: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--muted-foreground);
+  cursor: pointer;
+  transition: color 160ms ease, background-color 160ms ease;
+}
+
+.name-audio:hover,
+.name-audio.is-playing {
+  background: var(--accent);
+  color: var(--foreground);
+}
+
+.name-audio:focus-visible {
+  outline: 2px solid var(--foreground);
+  outline-offset: 2px;
+}
+
+.name-audio svg {
+  width: 1.05rem;
+  height: 1.05rem;
+}
+
+.name-audio.is-playing .name-audio__wave {
+  animation: name-audio-wave 700ms ease-in-out infinite;
+}
+
+.name-audio.is-playing .name-audio__wave--2 {
+  animation-delay: 140ms;
+}
+
+@keyframes name-audio-wave {
+  50% {
+    opacity: 0.25;
+  }
+}
+
+.profile-header__native-name {
+  color: var(--muted-foreground);
+  font-family: "Noto Sans Myanmar", "Myanmar Text", "Myanmar Sangam MN", Padauk, var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .status-dot {
@@ -842,6 +892,100 @@ body[data-theme="dark"] .stack-pill__icon {
 .position-item p {
   color: var(--muted-foreground);
   font-size: 0.95rem;
+}
+
+.achievement-card__footer {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  margin-left: 2.1rem;
+}
+
+.achievement-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.achievement-gallery__item {
+  display: block;
+  width: 9rem;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 0.72rem;
+  background: var(--accent);
+  cursor: zoom-in;
+}
+
+.achievement-gallery__item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  transition: transform 220ms ease;
+}
+
+.achievement-gallery__item:hover img {
+  transform: scale(1.03);
+}
+
+.achievement-gallery__item:focus-visible {
+  outline: 2px solid var(--foreground);
+  outline-offset: 2px;
+}
+
+.lightbox {
+  max-width: min(calc(100vw - 2rem), 40rem);
+  max-height: calc(100vh - 2rem);
+  margin: auto;
+  padding: 0;
+  overflow: visible;
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.lightbox::backdrop {
+  background: rgba(0, 0, 0, 0.72);
+}
+
+.lightbox__figure {
+  display: grid;
+}
+
+.lightbox__image {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: calc(100vh - 6rem);
+  margin: 0 auto;
+  border-radius: 0.9rem 0.9rem 0 0;
+}
+
+.lightbox__caption {
+  padding: 0.7rem 1rem;
+  color: var(--muted-foreground);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
+.lightbox__close {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--background);
+  color: var(--foreground);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
 }
 
 .project-list {

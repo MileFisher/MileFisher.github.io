@@ -2,7 +2,7 @@
 
 ## Short Bio
 
-Aung Khant Paing is a Software Engineering student at TDTU who enjoys building practical systems across full-stack development, AI applications, databases, ERP workflows, and deployment. His work spans React and Node.js web apps, Python-based backend and AI projects, Android development, Odoo familiarity, and DevOps-focused coursework using Docker, Terraform, Ansible, and CI/CD pipelines.
+Aung Khant Paing is a Software Engineering student at TDTU who enjoys building practical systems across full-stack development, AI applications, databases, ERP workflows, and deployment. His work spans React and Node.js web apps, Python-based backend and AI projects, Android development, Odoo familiarity, and DevOps-focused coursework using Docker, Kubernetes, Terraform, Ansible, and CI/CD pipelines. He completed a Software & AI Engineering internship at TechValley Vietnam (Jul - Sep 2026), and his team project KneeXpert won 4th Prize (Innovative Potential Prize) at the VietFuture Awards 2026.
 
 ## Portfolio Copy
 
@@ -12,9 +12,42 @@ Hi, I'm **Aung Khant Paing**, a **Software Engineering student at TDTU** with a 
 
 ### About Me
 
-I am a software engineering student focused on building reliable applications from frontend to deployment. My projects show a mix of web development, applied AI, database systems, ERP workflows, and infrastructure work, with hands-on experience in JavaScript, Python, Java, React, Node.js, FastAPI, PostgreSQL, Docker, GitHub-based workflows, and Odoo.
+I am a software engineering student focused on building reliable applications from frontend to deployment. My projects show a mix of web development, applied AI, database systems, ERP workflows, and infrastructure work, with hands-on experience in JavaScript, Python, Java, React, Node.js, FastAPI, PostgreSQL, Docker, Kubernetes, GitHub-based workflows, and Odoo.
 
 I am especially interested in projects that solve real problems, whether that means improving academic integrity through system design, building service-oriented platforms, supporting AI-assisted healthcare tools, or automating delivery workflows with DevOps tools. I value practical implementation, continuous learning, and collaborating through well-structured code. I have also received Encouragement Scholarships for academic achievement across all four semesters of the 2023/24 and 2024/25 academic years.
+
+### Achievements
+
+#### KneeXpert
+**Focus:** Medical AI, computer vision, dual-modality X-ray and MRI analysis
+
+KneeXpert is an AI system for knee joint analysis and diagnosis using dual-modality X-ray and MRI architectures, built as a team project.
+
+- **4th Prize (Innovative Potential Prize), VietFuture Awards 2026** - recognised at the awards ceremony in Ho Chi Minh City on 18 Sep 2026.
+- **2nd Prize, TDTU university round** - selected as one of Ton Duc Thang University's representative teams for the Eureka Student Scientific Research Award.
+
+Showcase: https://knee-xpert-showcase.vercel.app/
+
+### Experience
+
+#### TechValley Vietnam - Software & AI Engineering Intern
+**Jul 2026 - Sep 2026**
+
+Worked across software engineering and applied AI tasks as part of the engineering team.
+
+#### FPT IS - Network Engineering Intern
+**08 Apr 2025 - 07 Jul 2025**
+
+Focused on networking fundamentals and used Cisco Packet Tracer to strengthen configuration and setup knowledge.
+
+#### Creative Language Center, TDTU
+- **Media and Design Team Leader, 2023 - Current** - leading visual communication work and supporting team coordination, planning, and delivery.
+- **Teaching Assistant, until 2025** - supported classroom and center activities alongside the media and design work.
+
+#### Independent Translation Work - Translator
+**2020 - 2024**
+
+Translated English movie subtitles into Myanmar, improving precision, consistency, and editorial discipline.
 
 ### Featured Projects
 
@@ -69,7 +102,7 @@ These team and coursework projects reflect my willingness to work across differe
 
 **Database:** PostgreSQL, SQLite, SQL Server, MongoDB
 
-**DevOps and Tools:** Docker, GitHub Actions, Terraform, Ansible, Git, Cloudflare Pages, Render, Stripe sandbox workflows
+**DevOps and Tools:** Docker, Kubernetes, GitHub Actions, Terraform, Ansible, Git, Cloudflare Pages, Render, Stripe sandbox workflows
 
 ### Closing Statement
 
@@ -79,8 +112,10 @@ I am building my experience through academic and personal projects that connect 
 
 Hi, I'm **Aung Khant Paing**, a Software Engineering student at TDTU. I enjoy building full-stack applications, experimenting with AI-powered systems, and learning how software moves from development into real deployment.
 
-My GitHub reflects the areas I care about most: practical web development, applied AI, database systems, ERP workflows, and DevOps workflows. I have worked with JavaScript, Python, Java, React, Node.js, FastAPI, PostgreSQL, SQL Server, MongoDB, Docker, Terraform, GitHub Actions, and Odoo familiarity through projects ranging from academic systems to AI-assisted healthcare tools.
+My GitHub reflects the areas I care about most: practical web development, applied AI, database systems, ERP workflows, and DevOps workflows. I have worked with JavaScript, Python, Java, React, Node.js, FastAPI, PostgreSQL, SQL Server, MongoDB, Docker, Kubernetes, Terraform, GitHub Actions, and Odoo familiarity through projects ranging from academic systems to AI-assisted healthcare tools.
 
 Some of my strongest work includes a **DevOps final project** focused on CI/CD and infrastructure automation, **Guardrail LMS**, a full-stack academic integrity platform with telemetry monitoring and AI-guided tutoring, **AI Clinical Navigator**, an unfinished team project where the frontend is complete and model integration is still pending, and **Advanced DB Final**, a multi-service fundraising platform using both SQL and NoSQL systems.
+
+I also completed a Software & AI Engineering internship at TechValley Vietnam from July to September 2026. With my team, I built **KneeXpert**, an AI system for knee joint analysis using X-ray and MRI, which won 2nd prize at TDTU, was selected to represent the university at Eureka, and won 4th Prize (Innovative Potential Prize) at the VietFuture Awards 2026.
 
 I enjoy solving real problems through code, learning new tools by building with them, and contributing to collaborative projects that improve both the technical and operational sides of software systems. I have also maintained strong academic standing through Encouragement Scholarships awarded across all four semesters of the 2023/24 and 2024/25 academic years.

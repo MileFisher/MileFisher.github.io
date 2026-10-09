@@ -5,6 +5,11 @@ const currentYear = document.querySelector("#current-year");
 const flipLine = document.querySelector("#flip-line");
 const profileCover = document.querySelector("#profile-cover");
 const themeMedia = window.matchMedia("(prefers-color-scheme: dark)");
+const lightbox = document.querySelector("#lightbox");
+const lightboxImage = document.querySelector("#lightbox-image");
+const lightboxCaption = document.querySelector("#lightbox-caption");
+const nameAudio = document.querySelector("#name-audio");
+const nameAudioButton = document.querySelector("#name-audio-button");
 
 const flipSentences = [
   "Building practical systems. Small details matter.",
@@ -94,9 +99,55 @@ function attachCoverSpotlight() {
   resetSpotlight();
 }
 
+function attachLightbox() {
+  if (!lightbox || typeof lightbox.showModal !== "function") {
+    return;
+  }
+
+  document.querySelectorAll(".achievement-gallery__item").forEach((item) => {
+    item.addEventListener("click", (event) => {
+      event.preventDefault();
+      const thumbnail = item.querySelector("img");
+
+      lightboxImage.src = item.getAttribute("href");
+      lightboxImage.alt = thumbnail?.alt ?? "";
+      lightboxCaption.textContent = item.dataset.caption ?? "";
+      lightbox.showModal();
+    });
+  });
+
+  // Clicking the backdrop (outside the figure) closes the viewer.
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) {
+      lightbox.close();
+    }
+  });
+}
+
+function attachNameAudio() {
+  if (!nameAudio || !nameAudioButton) {
+    return;
+  }
+
+  const setPlaying = (isPlaying) => {
+    nameAudioButton.classList.toggle("is-playing", isPlaying);
+  };
+
+  nameAudioButton.addEventListener("click", () => {
+    nameAudio.currentTime = 0;
+    nameAudio.play().catch(() => setPlaying(false));
+  });
+
+  nameAudio.addEventListener("play", () => setPlaying(true));
+  nameAudio.addEventListener("ended", () => setPlaying(false));
+  nameAudio.addEventListener("pause", () => setPlaying(false));
+}
+
 syncThemeFromPreference();
 updateLocalTime();
 attachCoverSpotlight();
+attachLightbox();
+attachNameAudio();
 
 window.setInterval(updateLocalTime, 60000);
 window.setInterval(rotateFlipLine, 3200);
