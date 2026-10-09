@@ -1,2 +1,6 @@
 gh-portable/
 gh-portable.zip
+
+# Original media kept locally; the site uses the optimized copies
+assets/photos/*.jpg
+assets/audio/athanlab-*.wav
